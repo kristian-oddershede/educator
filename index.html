@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristian D Oddershede | Facilitator</title>
-  <meta name="description" content="Kristian Dahlmann Oddershede — volunteer leader at At Være Ung, a youth-focused volunteer organisation.">
+  <title>Kristian D. Oddershede | Foredrag & Workshops</title>
+  <meta name="description" content="Book Kristian Dahlmann Oddershede til foredrag, workshops og facilitering. Inspirerende formidling om læring, unge og fællesskab.">
 
-  <!-- Lucide Icons CDN -->
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
     :root {
       --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --bg: #f9fafb;
-      --text: #111827;
-      --muted: #6b7280;
+      --primary-hover: #1e40af;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #64748b;
+      --white: #ffffff;
     }
 
     body {
-      font-family: system-ui, sans-serif;
-      background-color: var(--bg);
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
       color: var(--text);
       margin: 0;
       padding: 0;
       text-align: center;
+      line-height: 1.7;
     }
 
     /* --- HEADER (Top Left) --- */
@@ -35,17 +37,17 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       padding: 0.5rem 1rem;
       border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       backdrop-filter: blur(8px);
       z-index: 10;
     }
 
     header img {
-      width: 48px;
-      height: 48px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       object-fit: cover;
     }
@@ -56,7 +58,7 @@
       color: var(--text);
     }
 
-    /* --- FIXED CONTACT BUTTONS (Top Right) --- */
+    /* --- CONTACT BUTTONS (Top Right) --- */
     .contact-buttons-fixed {
       position: fixed;
       top: 1rem;
@@ -64,10 +66,10 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       padding: 0.5rem 0.75rem;
       border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       backdrop-filter: blur(8px);
       z-index: 10;
     }
@@ -75,13 +77,12 @@
     a.button {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      justify-content: center;
       color: white;
-      padding: 0.5rem 0.9rem;
+      width: 36px;
+      height: 36px;
       border-radius: 0.5rem;
       text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
       transition: transform 0.2s ease, filter 0.2s ease;
     }
 
@@ -90,66 +91,69 @@
       filter: brightness(1.1);
     }
 
-    /* Individual platform styles */
-    .button.email {
-      background-color: var(--primary);
-    }
-
-    .button.instagram {
+    .email { background: var(--primary); }
+    .instagram {
       background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
     }
+    .linkedin { background: #0a66c2; }
 
-    .button.linkedin {
-      background-color: #0a66c2;
-    }
-
-    /* --- MAIN CONTENT --- */
+    /* --- MAIN --- */
     main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      padding: 7rem 1rem 2rem;
-      max-width: 700px;
+      padding: 7rem 1rem 4rem;
+      max-width: 720px;
       margin: 0 auto;
     }
 
-    h1, h2 {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
     h1 {
-      font-size: 2rem;
-      margin-top: 0;
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
     }
 
     h2 {
-      font-size: 1.5rem;
-      margin-top: 2rem;
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
     }
 
     p {
-      line-height: 1.6;
-      margin: 0.5rem 0 1.5rem;
-      color: var(--text);
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    a.main-button {
+    .highlight {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .cta {
       display: inline-block;
+      margin-top: 1rem;
       background-color: var(--primary);
       color: white;
-      padding: 0.75rem 1.25rem;
-      border-radius: 0.5rem;
+      padding: 0.9rem 1.4rem;
+      border-radius: 0.6rem;
       text-decoration: none;
       font-weight: 500;
-      transition: background-color 0.2s ease-in-out;
-      margin: 0.25rem;
+      transition: background-color 0.25s, transform 0.25s;
     }
 
-    a.main-button:hover {
+    .cta:hover {
       background-color: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    section {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
     }
 
     footer {
@@ -157,67 +161,77 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
+
+    /* Smooth fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    main > * {
+      animation: fadeIn 0.7s ease forwards;
+    }
   </style>
 </head>
+
 <body>
-  <!-- Header (Top Left) -->
+  <!-- Header -->
   <header>
-    <img src="https://media.licdn.com/dms/image/v2/D5603AQFedcv9opN3wA/profile-displayphoto-crop_800_800/B56ZgtcoLjHkAM-/0/1753109138403?e=1762387200&v=beta&t=LU4zp5fQxHffhGUjknk4jGSxheSWRdaXZ0GZGsXOcZ0" alt="Kristian Dahlmann Oddershede profile photo" />
-    <span>Kristian Dahlmann Oddershede</span>
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQFedcv9opN3wA/profile-displayphoto-crop_800_800/B56ZgtcoLjHkAM-/0/1753109138403?e=1762387200&v=beta&t=LU4zp5fQxHffhGUjknk4jGSxheSWRdaXZ0GZGsXOcZ0" alt="Kristian Dahlmann Oddershede profilfoto" />
+    <span>Kristian D. Oddershede</span>
   </header>
 
-  <!-- Contact Buttons (Top Right) -->
+  <!-- Contact Buttons -->
   <div class="contact-buttons-fixed">
-    <a class="button email" href="mailto:kristian.possum@gmail.com" target="_blank" rel="noopener noreferrer">
-      <i data-lucide="mail"></i>
-    </a>
-
-    <a class="button instagram" href="https://www.instagram.com/kristianoddershede/" target="_blank" rel="noopener noreferrer">
-      <i data-lucide="instagram"></i>
-    </a>
-
-    <a class="button linkedin" href="https://www.linkedin.com/in/kristian-dahlmann-oddershede-b5703a217/" target="_blank" rel="noopener noreferrer">
-      <i data-lucide="linkedin"></i>
-    </a>
+    <a class="button email" href="mailto:kristian.possum@gmail.com"><i data-lucide="mail"></i></a>
+    <a class="button instagram" href="https://www.instagram.com/kristianoddershede/" target="_blank"><i data-lucide="instagram"></i></a>
+    <a class="button linkedin" href="https://www.linkedin.com/in/kristian-dahlmann-oddershede-b5703a217/" target="_blank"><i data-lucide="linkedin"></i></a>
   </div>
 
   <main>
-    <h2>Educator and facilitator</h2>
+    <h1>Foredrag & Workshops</h1>
     <p>
-      I have more than 4000 hours of experience in practical <strong>Science Communication and Education</strong>. Working with schools, universities and science 
-      museums to create interactive learning spaces and foster hands-on education. Most recently I helped CERN (European Organisation for Nuclear Research) 
-      in restructuring how they train their science guides for the task of engageing with visitors. My formal background is a <strong>Master's degree in physics</strong> 
-      from Aarhus University in Denmark.
+      Jeg hjælper skoler, foreninger og organisationer med at skabe engagerende og meningsfulde læringsoplevelser.
+      Mine <span class="highlight">foredrag, workshops og faciliterede forløb</span> kombinerer viden, nærvær og interaktivitet —
+      så deltagerne ikke bare lytter, men også oplever og reflekterer.
     </p>
 
-    
-    <h2>Volunteer Organisation</h2>
-    <p>
-      I’m passionate about youth engagement and community building. I manage
-      <strong>At Være Ung</strong> — a volunteer organisation that creates meaningful opportunities
-      for young people to connect and share their stories to help combate mental health issues in youth.
-    </p>
+    <a href="mailto:kristian.possum@gmail.com" class="cta">Book et oplæg</a>
 
-    <a class="main-button" href="https://atværeung.dk" target="_blank" rel="noopener noreferrer">
-      Visit 'At Være Ung'
-    </a>
+    <section>
+      <h2>Om mig</h2>
+      <p>
+        Jeg har over 4000 timers erfaring med <strong>formidling og undervisning</strong> inden for naturvidenskab og læring —
+        både på skoler, universiteter og i science-centre.  
+        Senest har jeg samarbejdet med <strong>CERN</strong> om at udvikle og forbedre træningen af deres science guides.  
+        Jeg er uddannet <strong>cand.scient. i fysik</strong> fra Aarhus Universitet.
+      </p>
+    </section>
 
-    <h2>Contact Information</h2>
-    <p>
-      You can reach me through different platforms — whether for collaboration, volunteering,
-      or just to connect and share ideas. Feel free to get in touch on social media or by mail.
-      The links are always accessible in the top right corner.
-    </p>
+    <section>
+      <h2>Frivilligt arbejde</h2>
+      <p>
+        Jeg leder <strong>At Være Ung</strong> — en frivillig organisation, der skaber rum for unge til at dele deres historier og styrke fællesskabet.  
+        Vi arbejder for at fremme trivsel og forebygge mistrivsel blandt unge gennem samtale, nærvær og ægte engagement.
+      </p>
+      <a href="https://atværeung.dk" class="cta" target="_blank">Besøg atværeung.dk</a>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <p>
+        Du er altid velkommen til at skrive, hvis du ønsker at booke et oplæg, samarbejde, eller bare udveksle idéer.  
+        Find mig via mail eller på de sociale medier i hjørnet heroppe.
+      </p>
+    </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Kristian Dahlmann Oddershede — All rights reserved.
+    © <span id="year"></span> Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes.
   </footer>
 
   <script>
-    // Update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Activate icons
     lucide.createIcons();
   </script>
 </body>
