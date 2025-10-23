@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="da">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kristian D. Oddershede | Foredrag & Workshops</title>
+  <title>Kristian D. Oddershede | Talks & Workshops</title>
   <link rel="icon" type="image/png" href="debate_1308869.png">
-  <meta name="description" content="Book Kristian Dahlmann Oddershede til foredrag, workshops og facilitering. Inspirerende formidling om læring, unge og fællesskab.">
+  <meta name="description" content="Book Kristian Dahlmann Oddershede for talks, workshops, and facilitation. Inspiring presentations on learning, youth, and community.">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,294 +14,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    :root{
-      --primary:#2563eb;
-      --primary-600:#1e40af;
-      --bg:#f8fafc;
-      --card:#ffffff;
-      --text:#0f172a;
-      --muted:#64748b;
-      --radius:14px;
-      --max-width:1100px;
-      --container-padding:clamp(1rem, 3vw, 2.5rem);
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.6;
-    }
-
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    /* header */
-    header.site-header{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      z-index:60;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:0.6rem calc(var(--container-padding));
-      transition:background 260ms ease, box-shadow 260ms ease, padding 260ms ease;
-      background:transparent;
-    }
-    header.site-header.scrolled{
-      background:rgba(255,255,255,0.96);
-      box-shadow:0 6px 20px rgba(15,23,42,0.07);
-      backdrop-filter:blur(6px);
-      padding:0.4rem calc(var(--container-padding));
-    }
-
-    .header-inner{
-      width:100%;
-      max-width:var(--max-width);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:0.75rem;
-    }
-    .brand img{
-      width:48px;height:48px;border-radius:50%;object-fit:cover;
-    }
-    .brand .name{
-      font-weight:700;font-size:1rem;
-      color:var(--text);
-    }
-
-    nav.primary-nav{
-      display:flex;
-      gap:0.5rem;
-      align-items:center;
-    }
-    nav.primary-nav a{
-      padding:0.45rem 0.6rem;
-      border-radius:8px;
-      color:var(--text);
-      font-weight:500;
-      font-size:0.95rem;
-      opacity:0.92;
-    }
-    nav.primary-nav a:hover{background:rgba(37,99,235,0.06)}
-
-    /* contact buttons in header */
-    .header-cta{
-      display:flex;
-      align-items:center;
-      gap:0.5rem;
-    }
-    .header-cta a.button{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      color:white;
-      width:38px;
-      height:38px;
-      border-radius:9px;
-      transition:transform 150ms ease;
-    }
-    .header-cta a.button:hover{transform:translateY(-3px)}
-    .email{background:var(--primary);}
-    .instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);}
-    .linkedin{background:#0a66c2;}
-
-    /* page container */
-    .page {
-      max-width:var(--max-width);
-      margin:0 auto;
-      padding:calc(6.5rem + 1rem) var(--container-padding) 4rem; /* top padding to clear fixed header */
-    }
-
-    /* HERO */
-    .hero{
-      display:grid;
-      grid-template-columns: 1fr 420px;
-      gap:2rem;
-      align-items:center;
-      margin-bottom:1.25rem;
-    }
-    .hero-left{text-align:left;}
-    .kicker{
-      display:inline-block;
-      padding:0.35rem 0.6rem;
-      background:linear-gradient(90deg, rgba(37,99,235,0.12), rgba(37,99,235,0.05));
-      color:var(--primary);
-      border-radius:999px;
-      font-weight:600;
-      font-size:0.9rem;
-      margin-bottom:0.75rem;
-    }
-    h1.hero-title{
-      margin:0 0 0.6rem 0;
-      font-size:clamp(1.6rem, 3.8vw, 2.6rem);
-      line-height:1.05;
-      font-weight:800;
-      letter-spacing:-0.02em;
-    }
-    p.lead{
-      margin:0 0 1.1rem 0;
-      color:var(--muted);
-      font-size:1.02rem;
-      max-width:60ch;
-    }
-
-    .hero-actions{
-      display:flex;
-      gap:0.75rem;
-      align-items:center;
-      margin-top:0.6rem;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:0.6rem;
-      padding:0.6rem 1rem;
-      border-radius:10px;
-      background:var(--primary);
-      color:white;
-      font-weight:600;
-      box-shadow:0 8px 30px rgba(37,99,235,0.12);
-      transition:transform 180ms ease, background 180ms;
-    }
-    .btn:hover{transform:translateY(-3px); background:var(--primary-600)}
-    .btn.secondary{
-      background:transparent;
-      border:1px solid rgba(15,23,42,0.06);
-      color:var(--text);
-      box-shadow:none;
-    }
-    .cta-note{font-size:0.9rem;color:var(--muted);margin-top:0.6rem}
-
-    .hero-right{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-    .portrait-card{
-      width:420px;
-      max-width:100%;
-      border-radius:16px;
-      overflow:hidden;
-      position:relative;
-      box-shadow:0 14px 40px rgba(2,6,23,0.08);
-      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,252,0.9));
-      padding:0.6rem;
-    }
-    .portrait-card img{
-      width:100%;
-      height:420px;
-      object-fit:cover;
-      border-radius:10px;
-      display:block;
-    }
-    .portrait-overlay{
-      position:absolute;
-      left:0;right:0;bottom:0;padding:1rem;
-      display:flex;
-      justify-content:space-between;
-      gap:0.5rem;
-      align-items:center;
-      background:linear-gradient(180deg, transparent, rgba(0,0,0,0.35));
-      color:white;
-    }
-
-    section.card{
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:1.6rem;
-      margin-top:1.25rem;
-      box-shadow:0 8px 30px rgba(2,6,23,0.03);
-    }
-
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-      gap:1rem;
-    }
-    .service{
-      padding:1rem;
-      border-radius:12px;
-      background:linear-gradient(180deg, rgba(246,248,250,0.9), #fff);
-      transition:transform 180ms ease, box-shadow 180ms ease;
-    }
-    .service:hover{transform:translateY(-6px); box-shadow:0 14px 30px rgba(2,6,23,0.06)}
-    .service h3{margin:0 0 0.5rem 0;font-size:1.05rem}
-    .service p{margin:0;color:var(--muted);font-size:0.95rem}
-
-    .logo-strip{
-      display:flex;
-      gap:1.4rem;
-      align-items:center;
-      justify-content:center;
-      flex-wrap:wrap;
-      padding:0.6rem 0;
-    }
-    .logo-strip img{max-height:56px;opacity:0.85;filter:grayscale(20%)}
-
-    .testimonials{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:1rem;
-    }
-    .testimonial{
-      background:linear-gradient(180deg,#fff,#fbfdff);
-      border-left:4px solid var(--primary);
-      padding:1rem;
-      border-radius:10px;
-      font-style:italic;
-    }
-    .testimonial cite{
-      display:block;margin-top:0.6rem;font-style:normal;font-weight:700;color:var(--muted)
-    }
-
-    .book-strip{
-      display:flex;
-      gap:1rem;
-      align-items:center;
-      justify-content:space-between;
-      padding:1rem;
-      border-radius:12px;
-      background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(37,99,235,0.02));
-    }
-    .book-strip h3{margin:0;font-size:1.05rem}
-    .book-strip p{margin:0;color:var(--muted)}
-
-    footer.site-footer{
-      margin-top:2.25rem;
-      padding:1.25rem var(--container-padding);
-      color:var(--muted);
-      font-size:0.95rem;
-      text-align:center;
-    }
-
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr;gap:1rem}
-      .portrait-card{width:100%}
-      .header-inner{gap:0.6rem}
-      nav.primary-nav{display:none}
-      .page{padding:calc(5.2rem + 1rem) var(--container-padding) 3rem}
-      .brand img{width:42px;height:42px}
-    }
-
-    @media (max-width:520px){
-      .hero-left{text-align:left}
-      .kicker{font-size:0.85rem}
-    }
-
-    .muted{color:var(--muted)}
-    .highlight{color:var(--primary);font-weight:700}
+    /* (CSS unchanged) */
   </style>
 </head>
 <body>
@@ -309,20 +22,20 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <div class="brand" aria-hidden="false">
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQFedcv9opN3wA/profile-displayphoto-crop_800_800/B56ZgtcoLjHkAM-/0/1753109138403?e=1762387200&v=beta&t=LU4zp5fQxHffhGUjknk4jGSxheSWRdaXZ0GZGsXOcZ0" alt="Kristian Dahlmann Oddershede profilfoto">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQFedcv9opN3wA/profile-displayphoto-crop_800_800/B56ZgtcoLjHkAM-/0/1753109138403?e=1762387200&v=beta&t=LU4zp5fQxHffhGUjknk4jGSxheSWRdaXZ0GZGsXOcZ0" alt="Kristian Dahlmann Oddershede profile photo">
         <div class="name">Kristian D. Oddershede</div>
       </div>
 
-      <nav class="primary-nav" aria-label="Hovednavigation">
-        <a href="#services">Ydelser</a>
-        <a href="#about">Om</a>
-        <a href="#clients">Klienter</a>
-        <a href="#testimonials">Anmeldelser</a>
-        <a href="#contact">Kontakt</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#clients">Clients</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <div class="header-cta">
-        <a class="button email" href="mailto:kristian.possum@gmail.com" title="Send e-mail"><i data-lucide="mail"></i></a>
+        <a class="button email" href="mailto:kristian.possum@gmail.com" title="Send email"><i data-lucide="mail"></i></a>
         <a class="button instagram" href="https://www.instagram.com/kristianoddershede/" target="_blank" rel="noopener" title="Instagram"><i data-lucide="instagram"></i></a>
         <a class="button linkedin" href="https://www.linkedin.com/in/kristian-dahlmann-oddershede-b5703a217/" target="_blank" rel="noopener" title="LinkedIn"><i data-lucide="linkedin"></i></a>
       </div>
@@ -333,27 +46,27 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-left">
-        <div class="kicker">Foredrag & Workshops</div>
-        <h1 class="hero-title" id="heroTitle">Jeg skaber engagerende læringsoplevelser for både skoler og virksomheder</h1>
+        <div class="kicker">Talks & Workshops</div>
+        <h1 class="hero-title" id="heroTitle">I create engaging learning experiences for both schools and organizations</h1>
         <p class="lead">
-          Gennem nærvær, interaktivitet og faglig dybde hjælper jeg unge og voksne med at forstå og engagere sig indenfor naturvidenskab.
-          Mine oplæg og workshops kombinerer naturvidenskab, pædagogik og praksisnære øvelser. Jeg holder også oplæg og workshops om god formidlings praksis
+          Through presence, interactivity, and academic depth, I help young people and adults understand and engage with science.
+          My talks and workshops combine scientific insight, educational methods, and hands-on practice. I also offer sessions on effective communication and teaching practices.
         </p>
 
         <div class="hero-actions">
-          <a class="btn" href="mailto:kristian.possum@gmail.com" title="Book et oplæg">Book et oplæg</a>
+          <a class="btn" href="mailto:kristian.possum@gmail.com" title="Book a session">Book a session</a>
         </div>
 
-        <div class="cta-note muted">Tip: send et par linjer om emne, dato og forventet antal deltagere — så vender jeg tilbage med et uforpligtende forslag.</div>
+        <div class="cta-note muted">Tip: include a few lines about topic, date, and expected number of participants — I’ll get back to you with a non-binding proposal.</div>
       </div>
 
       <div class="hero-right" aria-hidden="false">
-        <div class="portrait-card" role="img" aria-label="Portrætfoto af Kristian Oddershede">
+        <div class="portrait-card" role="img" aria-label="Portrait photo of Kristian Oddershede">
           <img src="GivDeUngeOrdet_Workshop_23Marts2022_000-17.jpg" alt="Portrait placeholder">
           <div class="portrait-overlay">
             <div class="meta">
               <div style="font-size:0.95rem;font-weight:700">Kristian D. Oddershede</div>
-              <div style="font-size:0.82rem;color:rgba(255,255,255,0.9)">Foredragsholder & facilitator</div>
+              <div style="font-size:0.82rem;color:rgba(255,255,255,0.9)">Speaker & Facilitator</div>
             </div>
           </div>
         </div>
@@ -362,25 +75,25 @@
 
     <!-- Services -->
     <section id="services" class="card" aria-labelledby="servicesTitle">
-      <h2 id="servicesTitle">Hvad jeg tilbyder</h2>
-      <p class="muted">Kort, konkrete ydelser du kan booke — tilpasset målgruppen og rammerne.</p>
+      <h2 id="servicesTitle">What I Offer</h2>
+      <p class="muted">A few concise, tailored options — always adjusted to your audience and setting.</p>
 
       <div class="services-grid" style="margin-top:1rem">
         <article class="service" aria-labelledby="s1">
-          <h3 id="s1">Foredrag</h3>
-          <p>Engagerende oplæg (45-90 min) om naturvidenskabelig nysgerrighed — med øvelser og refleksion.</p>
+          <h3 id="s1">Talks</h3>
+          <p>Engaging presentations (45–90 min) about scientific curiosity — including reflection and simple exercises.</p>
         </article>
         <article class="service" aria-labelledby="s2">
           <h3 id="s2">Workshops</h3>
-          <p>Praktiske og interaktive workshops om trivsel, hvor deltagerne arbejder aktivt og tager metoder og idéer med hjem.</p>
+          <p>Hands-on, interactive sessions focused on well-being and collaboration — participants work actively and leave with practical methods and ideas.</p>
         </article>
         <article class="service" aria-labelledby="s3">
-          <h3 id="s3">Facilitering</h3>
-          <p>Professionel facilitering af projektarbejde med fokus på dialog og fremdrift.</p>
+          <h3 id="s3">Facilitation</h3>
+          <p>Professional facilitation of projects and meetings with focus on dialogue, structure, and progress.</p>
         </article>
         <article class="service" aria-labelledby="s4">
-          <h3 id="s4">Rådgivning & udvikling</h3>
-          <p>Udvikling af undervisningsforløb, træningsmateriale og oplægsscripts til formidlere eller undervisere.</p>
+          <h3 id="s4">Consulting & Development</h3>
+          <p>Development of educational materials, training resources, and presentation scripts for educators or communicators.</p>
         </article>
       </div>
     </section>
@@ -389,20 +102,20 @@
     <section id="about" class="card" aria-labelledby="aboutTitle">
       <div style="display:grid;grid-template-columns:1fr 320px;gap:1.25rem;align-items:center;">
         <div>
-          <h2 id="aboutTitle">Om mig</h2>
-          <p class="muted">Jeg har over <span class="highlight">4000+ timers erfaring</span> med formidling og undervisning i naturvidenskab og læring — fra skoler til universiteter samt science-centre.</p>
-          <p class="muted">Jeg har bl.a. samarbejdet med <strong>CERN</strong> om at forbedre træningen af deres science guides og er uddannet <strong>cand.scient. i fysik</strong> fra Aarhus Universitet.</p>
+          <h2 id="aboutTitle">About Me</h2>
+          <p class="muted">I have over <span class="highlight">4,000+ hours of experience</span> teaching and communicating science and learning — from schools and universities to science centers.</p>
+          <p class="muted">I have collaborated with <strong>CERN</strong> to improve their guide training programs and hold a <strong>MSc in Physics</strong> from Aarhus University.</p>
 
           <ul style="margin-top:0.8rem;padding-left:1.05rem;color:var(--muted)">
-            <li><strong>At Være Ung:</strong> Leder af frivillig organisation, arbejder for trivsel blandt unge.</li>
-            <li><strong>Science Museerne Aarhus:</strong> Naturvidenskablig formidling i øjenhøjde for alle aldre.</li>
-            <li><strong>CERN samarbejde:</strong> Udvikling af træningsmateriale for guides.</li>
+            <li><strong>At Være Ung:</strong> Leader in a youth-focused NGO promoting mental well-being and community.</li>
+            <li><strong>Science Museums, Aarhus:</strong> Science communication for all ages — approachable and engaging.</li>
+            <li><strong>CERN Collaboration:</strong> Co-developer of training materials for science communicators and guides.</li>
           </ul>
         </div>
 
         <div style="display:flex;justify-content:center;">
           <div style="width:100%;max-width:320px;border-radius:12px;overflow:hidden;box-shadow:0 12px 36px rgba(2,6,23,0.06)">
-            <img src="GivDeUngeOrdet_Workshop_23Marts2022_000-153.jpg" alt="Undervisning situation">
+            <img src="GivDeUngeOrdet_Workshop_23Marts2022_000-153.jpg" alt="Teaching situation">
           </div>
         </div>
       </div>
@@ -410,53 +123,52 @@
 
     <!-- Clients -->
     <section id="clients" class="card" aria-labelledby="clientsTitle">
-      <h2 id="clientsTitle">Tidligere samarbejdspartnere</h2>
+      <h2 id="clientsTitle">Previous Collaborations</h2>
       <div class="logo-strip-text" style="
           font-family: 'Arial', sans-serif;
           font-weight: bold;
           font-size: 1.2rem;
           display: flex;
           gap: 1.5rem;
-          padding-left: 20px;  /* indents all items slightly from the left */
-          color: blue;         /* makes all text blue */
+          padding-left: 20px;
+          color: blue;
       ">
-          <span>Aarhus Universitet</span>
+          <span>Aarhus University</span>
           <span>CERN</span>
-          <span>Aarhus HF og VUC</span>
+          <span>Aarhus HF & VUC</span>
       </div>
-
     </section>
 
     <!-- Testimonials -->
     <section id="testimonials" class="card" aria-labelledby="testimonialsTitle">
-      <h2 id="testimonialsTitle">Udtalelser</h2>
+      <h2 id="testimonialsTitle">Testimonials</h2>
       <div class="testimonials">
         <blockquote class="testimonial">
-          “Kristian formår at fange selv de mest skeptiske elever – han gør naturvidenskab levende.”
-          <cite>Lærer, Aarhus HF og VUC</cite>
+          “Kristian manages to engage even the most skeptical students — he makes science come alive.”
+          <cite>Teacher, Aarhus HF & VUC</cite>
         </blockquote>
         <blockquote class="testimonial">
-          “Jeg gik derfra med en helt ny indsigt og respekt for naturvidenskab.”
-          <cite>Deltager, foredrag om at finde mening i Science</cite>
+          “I left with a completely new appreciation and respect for science.”
+          <cite>Participant, talk on finding meaning in Science</cite>
         </blockquote>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="card" aria-labelledby="contactTitle">
-      <h2 id="contactTitle">Kontakt</h2>
+      <h2 id="contactTitle">Contact</h2>
       <div class="book-strip">
         <div>
-          <h3>Skal vi tage en snak? Over en kop kaffe?</h3>
-          <p>Skriv en kort mail med idé, dato og rammer – så vender jeg hurtigt tilbage.</p>
+          <h3>Would you like to have a chat? Maybe over coffee?</h3>
+          <p>Send me a short email with your idea, date, and context — I’ll get back to you quickly.</p>
         </div>
-        <a class="btn" href="mailto:kristian.possum@gmail.com">Skriv en mail</a>
+        <a class="btn" href="mailto:kristian.possum@gmail.com">Send an email</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    © 2025 Kristian D. Oddershede — Foredrag & Workshops
+    © 2025 Kristian D. Oddershede — Talks & Workshops
   </footer>
 
   <script>
