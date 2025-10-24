@@ -10,8 +10,8 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons (deferred for correct loading) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 
   <style>
     :root{
@@ -417,13 +417,14 @@
           font-size: 1.2rem;
           display: flex;
           gap: 1.5rem;
-          padding-left: 20px;  /* indents all items slightly from the left */
-          color: blue;         /* makes all text blue */
+          padding-left: 20px;
+          color: blue;
       ">
           <span>Aarhus University</span>
           <span>CERN</span>
           <span>Aarhus HF og VUC</span>
       </div>
+    </section>
 
     <!-- Testimonials -->
     <section id="testimonials" class="card" aria-labelledby="testimonialsTitle">
@@ -452,15 +453,19 @@
   </footer>
 
   <script>
-    lucide.createIcons();
-
-    const header = document.getElementById('siteHeader');
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 15){
-        header.classList.add('scrolled');
+    document.addEventListener("DOMContentLoaded", () => {
+      // Initialize Lucide icons
+      if (window.lucide && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
       } else {
-        header.classList.remove('scrolled');
+        console.warn("Lucide failed to load.");
       }
+
+      // Header scroll behavior
+      const header = document.getElementById('siteHeader');
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 15);
+      });
     });
   </script>
 </body>
