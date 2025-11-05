@@ -326,6 +326,12 @@
         <a href="#kontakt">Kontakt</a>
       </nav>
 
+      <div id="lang-switcher" style="display:flex; gap:0.4rem; align-items:center;">
+        <button data-lang="da" title="Dansk" style="font-size:1.2rem; background:none; border:none; cursor:pointer;">🇩🇰</button>
+        <button data-lang="en" title="English" style="font-size:1.2rem; background:none; border:none; cursor:pointer;">🇬🇧</button>
+      </div>
+
+
       <div class="header-cta">
         <!-- Mail (inline Lucide SVG) -->
         <a class="button email" href="mailto:kristian.possum@gmail.com" title="Send email" aria-label="Send email">
@@ -496,11 +502,179 @@
   </footer>
 
   <script>
-    // Header scroll behavior (unchanged)
+    // === Header scroll behavior ===
     const header = document.getElementById('siteHeader');
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 15);
     });
+  
+    // === Translations ===
+    const translations = {
+      da: {
+        heroKicker: "Talks & Workshops",
+        heroTitle: "Foredrag og workshops om science, formidling, og trivsel",
+        heroLead1: "Med seks års erfaring inden for naturvidenskabelig formidling fortæller jeg om moderne fysik på en let tilgængelig måde, hvor mennesker i alle aldre kan genfinde en lille passion for de store spørgsmål, vi stiller i videnskaben.",
+        heroLead2: "Derudover afholder jeg både foredrag og workshops om formidling, baseret på min erfaring med at udvikle meningsfuld videnskabsformidling for CERN – den europæiske organisation bag verdens største videnskabelige eksperiment på grænsen mellem Frankrig og Schweiz.",
+        heroLead3: "Samtidig har jeg gennem de seneste seks år afholdt trivselsworkshops for unge, faciliteret gennem et samtalespil, som jeg har designet med støtte fra Novo Nordisk Fonden.",
+        bookBtn: "Book her",
+        ctaNote: "Tip: inkludér et par linjer om emne, dato, og gruppe størrelse — så vender jeg tilbage hurtigst muligt med tilrettet forslag.",
+  
+        nav: ["Foredrag", "Workshops", "Om mig", "Kontakt"],
+  
+        foredragTitle: "Foredrag",
+        foredragText: "Et udvalg af foredrag, som kan blive tilpasset jeres vision og fokus.",
+        f1: ["At Træne Formidling", "Et dynamisk foredrag der inkorporer min baggrund med at oplære science formidlere ved CERN i Schweiz. Kombinerer erfaring med praktiske råd."],
+        f2: ["At finde mening i Science", "Populært til non-firmationer. Hvordan finder man mirakler i videnskaben, og hvilken værdi kan man finde i det faktum at vi alle er stjernestøv."],
+        f3: ["Universet og ny teknologi", "Her præsenterer jeg moderne naturvidenskab i øjenhøjde og beskriver alt fra universet til de store eksperimenter ved CERN."],
+  
+        workshopsTitle: "Workshops",
+        workshopsText: "Et udvalg af workshops, som kan blive tilpasset jeres vision og fokus.",
+        w1: ["God Formidling", "Hvordan præsenterer man fagligt skarpt, så folk lytter og forstår? Vi bruger praktiske øvelser og eksempler til sammen at blive lidt klogere på formidling."],
+        w2: ["Trivsel og unge", "I samarbejde med min frivillige forening At Være Ung afholder jeg workshops med fokus på trivsel, baseret på vores speciallavede samtalespil – udviklet for unge af unge."],
+  
+        aboutTitle: "Om mig",
+        aboutP1: "Med mere end 4.000 timers erfaring inden for undervisning og science formidling.",
+        aboutP2: "Jeg er cand.scient. i fysik fra Aarhus Universitet og har samarbejdet med CERN om at udvikle træningsprogrammer for deres science-guider.",
+        aboutList: [
+          "At Være Ung: Leder for min selvstartede frivillige forening, der arbejder for unges trivsel og mentale sundhed.",
+          "Science Museerne, Aarhus: Science formidling, der gør komplekse idéer tilgængelige og spændende.",
+          "Samarbejde med CERN: Medudvikler af interaktiv træning for scienceformidlere og undervisere."
+        ],
+  
+        testimonialsTitle: "Hvad folk siger",
+        t1: "“Kristians energi og nysgerrighed smitter – han får alle til at føle sig som en del af opdagelsesrejsen.”",
+        t2: "“Han formår at gøre selv det svære inden for fysik både forståeligt og spændende. En inspirerende formidler.”",
+        t3: "“Eleverne taler stadig om forløbet flere måneder senere. Det satte gang i ægte engagement og eftertanke.”",
+  
+        contactTitle: "Kunne du tænke dig at samarbejde om noget nyt?",
+        contactText: "Send mig en email — jeg elsker at høre om nye projekter og potentielle partnerskaber.",
+        contactBtn: "Kontakt mig",
+  
+        footer: "© 2025 Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes."
+      },
+  
+      en: {
+        heroKicker: "Talks & Workshops",
+        heroTitle: "Talks and workshops on science, communication, and wellbeing",
+        heroLead1: "With six years of experience in science communication, I share stories about modern physics in an engaging and accessible way, inspiring curiosity in audiences of all ages.",
+        heroLead2: "I also host talks and workshops on communication, based on my experience designing meaningful science outreach for CERN – the European organization behind the world’s largest scientific experiment.",
+        heroLead3: "In parallel, I have spent the past six years facilitating wellbeing workshops for young people through a conversation game I designed with support from the Novo Nordisk Foundation.",
+        bookBtn: "Book now",
+        ctaNote: "Tip: include a few lines about topic, date, and group size — I’ll get back to you soon with a tailored suggestion.",
+  
+        nav: ["Talks", "Workshops", "About", "Contact"],
+  
+        foredragTitle: "Talks",
+        foredragText: "A selection of talks that can be customized to your audience and focus.",
+        f1: ["Training Communication", "A dynamic talk inspired by my experience training science communicators at CERN, combining insights with practical advice."],
+        f2: ["Finding Meaning in Science", "Popular for coming-of-age events. How can we find wonder in science and meaning in the fact that we are all made of stardust?"],
+        f3: ["The Universe and New Technology", "An accessible introduction to modern science — from the cosmos to the cutting-edge experiments at CERN."],
+  
+        workshopsTitle: "Workshops",
+        workshopsText: "A selection of workshops tailored to your goals and participants.",
+        w1: ["Good Communication", "How do you present with clarity so people listen and understand? Through practical exercises, we explore what makes science communication effective."],
+        w2: ["Wellbeing & Youth", "In collaboration with my non-profit At Være Ung (To Be Young), I host workshops on youth wellbeing using our custom-made conversation game — developed by and for young people."],
+  
+        aboutTitle: "About me",
+        aboutP1: "With more than 4,000 hours of experience in teaching and science communication.",
+        aboutP2: "I hold an MSc in Physics from Aarhus University and have collaborated with CERN to design training programs for their science guides.",
+        aboutList: [
+          "At Være Ung: Founder and leader of a volunteer organization supporting youth wellbeing and mental health.",
+          "The Science Museums, Aarhus: Communicating complex ideas in engaging and relatable ways.",
+          "CERN Collaboration: Co-developer of interactive training for science communicators and educators."
+        ],
+  
+        testimonialsTitle: "What people say",
+        t1: "“Kristian’s energy and curiosity are contagious – he makes everyone feel part of the journey of discovery.”",
+        t2: "“He manages to make even complex physics understandable and exciting. A truly inspiring communicator.”",
+        t3: "“Students kept talking about the session for months afterwards. It sparked genuine engagement and reflection.”",
+  
+        contactTitle: "Interested in collaborating on something new?",
+        contactText: "Send me an email — I love hearing about new ideas and potential partnerships.",
+        contactBtn: "Contact me",
+  
+        footer: "© 2025 Kristian Dahlmann Oddershede — All rights reserved."
+      }
+    };
+  
+    // === Apply translations ===
+    function applyLanguage(lang) {
+      const t = translations[lang];
+      if (!t) return;
+  
+      document.querySelector('.kicker').textContent = t.heroKicker;
+      document.querySelector('h1.hero-title').textContent = t.heroTitle;
+  
+      const leads = document.querySelectorAll('.lead');
+      if (leads[0]) leads[0].textContent = t.heroLead1;
+      if (leads[1]) leads[1].textContent = t.heroLead2;
+      if (leads[2]) leads[2].textContent = t.heroLead3;
+  
+      document.querySelector('.btn').textContent = t.bookBtn;
+      document.querySelector('.cta-note').textContent = t.ctaNote;
+  
+      const nav = document.querySelectorAll('nav.primary-nav a');
+      nav.forEach((a, i) => (a.textContent = t.nav[i]));
+  
+      // Talks
+      document.querySelector('#foredrag h2').textContent = t.foredragTitle;
+      document.querySelector('#foredrag p.muted').textContent = t.foredragText;
+      const f = document.querySelectorAll('#foredrag .service');
+      f[0].querySelector('h3').textContent = t.f1[0];
+      f[0].querySelector('p').textContent = t.f1[1];
+      f[1].querySelector('h3').textContent = t.f2[0];
+      f[1].querySelector('p').textContent = t.f2[1];
+      f[2].querySelector('h3').textContent = t.f3[0];
+      f[2].querySelector('p').textContent = t.f3[1];
+  
+      // Workshops
+      document.querySelector('#workshops h2').textContent = t.workshopsTitle;
+      document.querySelector('#workshops p.muted').textContent = t.workshopsText;
+      const w = document.querySelectorAll('#workshops .service');
+      w[0].querySelector('h3').textContent = t.w1[0];
+      w[0].querySelector('p').textContent = t.w1[1];
+      w[1].querySelector('h3').textContent = t.w2[0];
+      w[1].querySelector('p').textContent = t.w2[1];
+  
+      // About
+      document.querySelector('#about h2').textContent = t.aboutTitle;
+      const aboutParas = document.querySelectorAll('#about p.muted');
+      aboutParas[0].textContent = t.aboutP1;
+      aboutParas[1].textContent = t.aboutP2;
+      const aboutLis = document.querySelectorAll('#about li');
+      aboutLis.forEach((li, i) => (li.textContent = t.aboutList[i]));
+  
+      // Testimonials
+      document.querySelector('#testimonials h2').textContent = t.testimonialsTitle;
+      const testQuotes = document.querySelectorAll('.testimonial');
+      testQuotes[0].firstChild.textContent = t.t1;
+      testQuotes[1].firstChild.textContent = t.t2;
+      testQuotes[2].firstChild.textContent = t.t3;
+  
+      // Contact
+      const contact = document.querySelector('#kontakt');
+      contact.querySelector('h3').textContent = t.contactTitle;
+      contact.querySelector('p').textContent = t.contactText;
+      contact.querySelector('.btn').textContent = t.contactBtn;
+  
+      // Footer
+      document.querySelector('footer.site-footer div').textContent = t.footer;
+    }
+  
+    // === Initialize ===
+    const buttons = document.querySelectorAll('#lang-switcher button');
+    const savedLang = localStorage.getItem('lang') || 'da';
+    applyLanguage(savedLang);
+    buttons.forEach(btn => {
+      btn.style.opacity = btn.dataset.lang === savedLang ? '1' : '0.5';
+      btn.addEventListener('click', e => {
+        const lang = e.target.dataset.lang;
+        localStorage.setItem('lang', lang);
+        buttons.forEach(b => (b.style.opacity = b.dataset.lang === lang ? '1' : '0.5'));
+        applyLanguage(lang);
+      });
+    });
   </script>
+
 </body>
 </html>
