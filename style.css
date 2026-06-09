@@ -289,19 +289,6 @@ footer.site-footer{
   .brand img{width:42px;height:42px}
 }
 
-/* Spejlvending af hero-sektionen (billede til venstre på computerskærme) */
-@media (min-width: 981px) {
-  .hero.hero-reversed {
-    grid-template-columns: 420px 1fr;
-  }
-  .hero.hero-reversed .hero-left {
-    grid-column: 2;
-  }
-  .hero.hero-reversed .hero-right {
-    grid-column: 1;
-  }
-}
-
 
 @media (max-width:520px){
   .hero-left{text-align:left}
