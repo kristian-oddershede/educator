@@ -19,18 +19,16 @@
         <div class="name">Kristian D. Oddershede</div>
       </div>
 
+      <!-- Opdateret navigation: Kun to links til undersiderne -->
       <nav class="primary-nav" aria-label="Main navigation">
-        <a href="#foredrag">Foredrag</a>
-        <a href="#workshops">Workshops</a>
-        <a href="#about">Om mig</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="formidling.html">Science Formidling</a>
+        <a href="trivsel.html">Unges Trivsel</a>
       </nav>
 
       <div id="lang-switcher" style="display:flex; gap:0.4rem; align-items:center;">
         <button data-lang="da" title="Dansk" style="font-size:1.2rem; background:none; border:none; cursor:pointer;">🇩🇰</button>
         <button data-lang="en" title="English" style="font-size:1.2rem; background:none; border:none; cursor:pointer;">🇬🇧</button>
       </div>
-
 
       <div class="header-cta">
         <a class="button email" href="mailto:kristian.possum@gmail.com" title="Send email" aria-label="Send email">
@@ -58,7 +56,7 @@
         <h1 class="hero-title" id="heroTitle">Foredrag og workshops om science, formidling, og trivsel</h1>
         <p class="lead">
           Med seks års erfaring inden for naturvidenskabelig formidling fortæller jeg om moderne fysik på en let tilgængelig måde, 
-          hvor mennesker i alle aldre kan genfinde en lille passion for de store spørgsmål, vi stiller i videnskaben.
+          gør videnskaben levende og inspirerer til nysgerrighed for mennesker i alle aldre.
         </p>
          
         <p class="lead">
@@ -71,7 +69,6 @@
           Samtidig har jeg gennem de seneste seks år afholdt trivselsworkshops for unge, faciliteret gennem et samtalespil, 
           som jeg har designet med støtte fra <strong>Novo Nordisk Fonden</strong>.
         </p>
-
 
         <div class="hero-actions">
           <a class="btn" href="mailto:kristian.possum@gmail.com" title="Book a session">Book her</a>
@@ -143,12 +140,12 @@
         <p class="muted">Jeg er <strong>cand.scient. i fysik</strong> fra Aarhus Universitet og har 
           samarbejdet med <strong>CERN</strong> om at udvikle træningsprogrammer for deres science-guider.</p> 
         <ul style="margin-top:0.8rem;padding-left:1.05rem;color:var(--muted)"> 
-          <li><strong>At Være Ung:</strong> Leder for min selvstartet frivillige forening, der arbejder for unges trivsel og mental sundhed.
-          </li> <li><strong>Science Museerne, Aarhus:</strong> Science formidling, der gør komplekse idéer tilgængelige og spændende.</li> 
+          <li><strong>At Være Ung:</strong> Leder for min selvstartet frivillige forening, der arbejder for unges trivsel og mental sundhed.</li> 
+          <li><strong>Science Museerne, Aarhus:</strong> Science formidling, der gør komplekse idéer tilgængelige og spændende.</li> 
           <li><strong>Samarbejde med CERN:</strong> Medudvikler af interaktiv træning for scienceformidlere og undervisere.</li>
-          </ul>
+        </ul>
         </div>
-     
+       
         <div style="display:flex; justify-content:center;">
           <div style="width:100%; max-width:500px; border-radius:12px; overflow:hidden; box-shadow:0 12px 36px rgba(2,6,23,0.06)">
             <img src="figures/GivDeUngeOrdet_Workshop_23Marts2022_000-153.jpg" alt="Teaching session with Kristian Oddershede" style="width:100%; height:auto;">
@@ -156,7 +153,6 @@
         </div>
       </div>
     </section>
-
 
     <section id="testimonials" class="card" aria-labelledby="testimonialsTitle">
       <h2 id="testimonialsTitle">Hvad folk siger</h2>
@@ -166,7 +162,6 @@
         <blockquote class="testimonial">“Eleverne taler stadig om forløbet flere måneder senere. Det satte gang i ægte engagement og eftertanke.”<cite>— Gymnasielærer</cite></blockquote>
       </div>
     </section>
-
 
     <section id="kontakt" class="card">
       <div class="book-strip">
@@ -201,7 +196,8 @@
         bookBtn: "Book her",
         ctaNote: "Tip: inkludér et par linjer om emne, dato, og gruppe størrelse — så vender jeg tilbage hurtigst muligt med tilrettet forslag.",
    
-        nav: ["Foredrag", "Workshops", "Om mig", "Kontakt"],
+        // Opdateret sprogopsætning til de to nye menupunkter
+        nav: ["Science Formidling", "Unges Trivsel"],
    
         foredragTitle: "Foredrag",
         foredragText: "Et udvalg af foredrag, som kan blive tilpasset jeres vision og fokus.",
@@ -220,7 +216,7 @@
         aboutList: [
           "At Være Ung: Leder for min selvstartede frivillige forening, der arbejder for unges trivsel og mentale sundhed.",
           "Science Museerne, Aarhus: Science formidling, der gør komplekse idéer tilgængelige og spændende.",
-          "Samarbejde med CERN: Medudvikler af interaktiv træning for scienceformidlere og undervisere."
+          "Samarbejde med CERN: Medudvikler av interaktiv træning for scienceformidlere og undervisere."
         ],
    
         testimonialsTitle: "Hvad folk siger",
@@ -230,7 +226,7 @@
    
         contactTitle: "Kunne du tænke dig at samarbejde om noget nyt?",
         contactText: "Send mig en email — jeg elsker at høre om nye projekter og potentielle partnerskaber.",
-        contactBtn: "Kontakt mig",
+        contactBtn: "Contact me",
    
         footer: "© 2025 Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes."
       },
@@ -244,7 +240,8 @@
         bookBtn: "Book now",
         ctaNote: "Tip: include a few lines about topic, date, and group size — I’ll get back to you soon with a tailored suggestion.",
    
-        nav: ["Talks", "Workshops", "About", "Contact"],
+        // Opdateret engelsk sprogopsætning til de to nye menupunkter
+        nav: ["Science Communication", "Youth Wellbeing"],
    
         foredragTitle: "Talks",
         foredragText: "A selection of talks that can be customized to your audience and focus.",
@@ -357,6 +354,5 @@
       });
     });
   </script>
-
 </body>
 </html>
