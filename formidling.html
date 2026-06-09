@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -8,8 +8,13 @@
   <meta name="description" content="Lær at formidle komplekst stof så det fænger. Workshops og foredrag om science formidling og træning af formidlere af Kristian Dahlmann Oddershede.">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Sprogstyring: Skjul automatisk det sprog, der ikke er aktivt */
+    html[lang="da"] [lang="en"] { display: none !important; }
+    html[lang="en"] [lang="da"] { display: none !important; }
+  </style>
 </head>
 <body>
   <header class="site-header" id="siteHeader">
@@ -20,10 +25,22 @@
       </div>
 
       <nav class="primary-nav" aria-label="Main navigation">
-        <a href="index.html">Forside</a>
-        <a href="#fokus">Fokusområder</a>
-        <a href="#erfaring">Min Tilgang</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="index.html">
+          <span lang="da">Forside</span>
+          <span lang="en">Home</span>
+        </a>
+        <a href="#fokus">
+          <span lang="da">Fokusområder</span>
+          <span lang="en">Focus Areas</span>
+        </a>
+        <a href="#erfaring">
+          <span lang="da">Min Tilgang</span>
+          <span lang="en">My Approach</span>
+        </a>
+        <a href="#kontakt">
+          <span lang="da">Kontakt</span>
+          <span lang="en">Contact</span>
+        </a>
       </nav>
 
       <div id="lang-switcher" style="display:flex; gap:0.4rem; align-items:center;">
@@ -53,17 +70,25 @@
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-left">
         <div class="kicker">Science Communication & Training</div>
-        <h1 class="hero-title" id="heroTitle">Lær at gøre det komplekse uforglemmeligt</h1>
+        <h1 class="hero-title" id="heroTitle">
+          <span lang="da">Lær at gøre det komplekse uforglemmeligt</span>
+          <span lang="en">Learn to make the complex unforgettable</span>
+        </h1>
         <p class="lead">
-          God formidling handler ikke om at forenkle sandheden, men om at gøre den tilgængelig. Jeg hjælper eksperter, studerende og organisationer med at mestre kunsten at tale om videnskab.
+          <span lang="da">God formidling handler ikke om at forenkle sandheden, men om at gøre den tilgængelig. Jeg hjælper eksperter, studerende og organisationer med at mestre kunsten at tale om videnskab.</span>
+          <span lang="en">Great communication isn't about oversimplifying the truth; it's about making it accessible. I help experts, students, and organizations master the art of talking about science.</span>
         </p>
          
         <p class="lead">
-          Baseret på min erfaring med at træne guider og formidlere ved <strong>CERN</strong>, tilbyder jeg skræddersyede workshops, der kombinerer teori med praktiske øvelser. Vi dykker ned i alt fra historiefortælling til kropssprog og teknikker til at håndtere svære spørgsmål.
+          <span lang="da">Baseret på min erfaring med at træne guider og formidlere ved <strong>CERN</strong>, tilbyder jeg skræddersyede workshops, der kombinerer teori med praktiske øvelser. Vi dykker ned i alt fra historiefortælling til kropssprog og teknikker til at håndtere svære spørgsmål.</span>
+          <span lang="en">Based on my experience training guides and communicators at <strong>CERN</strong>, I offer tailored workshops that blend theory with practical exercises. We explore everything from storytelling to body language and techniques for handling tough questions.</span>
         </p>
 
         <div class="hero-actions">
-          <a class="btn" href="mailto:kristian.possum@gmail.com" title="Book a session">Book en workshop</a>
+          <a class="btn" href="mailto:kristian.possum@gmail.com" title="Book a session">
+            <span lang="da">Book en workshop</span>
+            <span lang="en">Book a workshop</span>
+          </a>
         </div>
       </div>
 
@@ -81,35 +106,72 @@
     </section>
 
     <section id="fokus" class="card" aria-labelledby="servicesTitle">
-      <h2 id="servicesTitle">Workshops & Foredrag</h2>
-      <p class="muted">Praktisk træning designet til at løfte jeres formidlingsevner med det samme.</p>
+      <h2 id="servicesTitle">
+        <span lang="da">Workshops & Foredrag</span>
+        <span lang="en">Workshops & Talks</span>
+      </h2>
+      <p class="muted">
+        <span lang="da">Praktisk træning designet til at løfte jeres formidlingsevner med det samme.</span>
+        <span lang="en">Hands-on training designed to elevate your communication skills immediately.</span>
+      </p>
 
       <div class="services-grid" style="margin-top:1rem">
         <article class="service" aria-labelledby="s1">
-          <h3 id="s1">Fra Ekspert til Formidler</h3>
-          <p>En workshop for forskere og specialister. Vi arbejder med at identificere kernebudskabet og fjerne de barriere, der står i vejen for en god forståelse hos modtageren.</p>
+          <h3 id="s1">
+            <span lang="da">Fra Ekspert til Formidler</span>
+            <span lang="en">From Expert to Communicator</span>
+          </h3>
+          <p>
+            <span lang="da">En workshop for forskere og specialister. Vi arbejder med at identificere kernebudskabet og fjerne de barriere, der står i vejen for en god forståelse hos modtageren.</span>
+            <span lang="en">A workshop for researchers and specialists. We work on identifying the core message and removing the barriers that prevent clear understanding.</span>
+          </p>
         </article>
         <article class="service" aria-labelledby="s2">
-          <h3 id="s2">Træning af Formidlere</h3>
-          <p>Lær de teknikker, jeg har brugt til at træne science-guider ved CERN. Fokus på engagement, værtskab og evnen til at forklare det usynlige.</p>
+          <h3 id="s2">
+            <span lang="da">Træning af Formidlere</span>
+            <span lang="en">Training Communicators</span>
+          </h3>
+          <p>
+            <span lang="da">Lær de teknikker, jeg har brugt til at træne science-guider ved CERN. Fokus på engagement, værtskab og evnen til at forklare det usynlige.</span>
+            <span lang="en">Learn the techniques I used to train science guides at CERN. Focus on engagement, hospitality, and the ability to explain the invisible.</span>
+          </p>
         </article>
         <article class="service" aria-labelledby="s3">
-          <h3 id="s3">Storytelling i Science</h3>
-          <p>Hvordan bruger vi narrativer til at skabe fascination? Et foredrag om hvorfor menneskehjernen elsker historier, og hvordan vi bruger det til at huske data.</p>
+          <h3 id="s3">
+            <span lang="da">Storytelling i Science</span>
+            <span lang="en">Storytelling in Science</span>
+          </h3>
+          <p>
+            <span lang="da">Hvordan bruger vi narrativer til at skabe fascination? Et foredrag om hvorfor menneskehjernen elsker historier, og hvordan vi bruger det til at huske data.</span>
+            <span lang="en">How do we use narratives to spark fascination? A talk on why the human brain loves stories and how we use them to make data memorable.</span>
+          </p>
         </article>
       </div>
     </section>
 
     <section id="erfaring" class="card" aria-labelledby="aboutTitle">
-      <h2 id="aboutTitle">Min Tilgang</h2>
+      <h2 id="aboutTitle">
+        <span lang="da">Min Tilgang</span>
+        <span lang="en">My Approach</span>
+      </h2>
       <p class="muted">
-        Min undervisning tager udgangspunkt i "Learning by Doing". Formidling er en muskel, der skal trænes.
+        <span lang="da">Min undervisning tager udgangspunkt i "Learning by Doing". Formidling er en muskel, der skal trænes.</span>
+        <span lang="en">My teaching is based on "Learning by Doing". Communication is a muscle that needs to be exercised.</span>
       </p> 
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
         <ul style="padding-left:1.05rem;color:var(--muted)"> 
-          <li><strong>Evidensbaseret:</strong> Jeg trækker på pædagogiske principper og viden om kognitiv psykologi for at sikre, at budskaberne hænger ved.</li> 
-          <li><strong>Interaktivt:</strong> Mine workshops er aldrig bare et slideshow. Vi arbejder med praktiske scenarier og direkte feedback.</li> 
-          <li><strong>Fra CERN til klasseværelset:</strong> Jeg har erfaring med at træne folk til at tale foran alt fra Nobelprismodtagere til skoleklasser.</li>
+          <li>
+            <span lang="da"><strong>Evidensbaseret:</strong> Jeg trækker på pædagogiske principper og viden om kognitiv psykologi for at sikre, at budskaberne hænger ved.</span>
+            <span lang="en"><strong>Evidence-based:</strong> I draw on pedagogical principles and cognitive psychology to ensure your message sticks.</span>
+          </li> 
+          <li>
+            <span lang="da"><strong>Interaktivt:</strong> Mine workshops er aldrig bare et slideshow. Vi arbejder med praktiske scenarier og direkte feedback.</span>
+            <span lang="en"><strong>Interactive:</strong> My workshops are never just a slideshow. We work with practical scenarios and real-time feedback.</span>
+          </li> 
+          <li>
+            <span lang="da"><strong>Fra CERN til klasseværelset:</strong> Jeg har erfaring med at træne folk til at tale foran alt fra Nobelprismodtagere til skoleklasser.</span>
+            <span lang="en"><strong>From CERN to the classroom:</strong> I have experience training people to speak before everyone from Nobel laureates to primary school students.</span>
+          </li>
         </ul>
       </div>
     </section>
@@ -117,129 +179,57 @@
     <section id="kontakt" class="card">
       <div class="book-strip">
         <div>
-          <h3>Vil I styrke jeres stemme?</h3>
-          <p>Kontakt mig for at høre mere om, hvordan vi kan skræddersy et forløb til jeres team eller institution.</p>
+          <h3>
+            <span lang="da">Vil I styrke jeres stemme?</span>
+            <span lang="en">Want to strengthen your voice?</span>
+          </h3>
+          <p>
+            <span lang="da">Kontakt mig for at høre mere om, hvordan vi kan skræddersy et forløb til jeres team eller institution.</span>
+            <span lang="en">Contact me to learn more about how we can tailor a program for your team or institution.</span>
+          </p>
         </div>
-        <a class="btn" href="mailto:kristian.possum@gmail.com">Kontakt mig</a>
+        <a class="btn" href="mailto:kristian.possum@gmail.com">
+          <span lang="da">Kontakt mig</span>
+          <span lang="en">Contact me</span>
+        </a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div>&copy; 2025 Kristian Dahlmann Oddershede — All rights reserved.</div>
+    <div>
+      <span lang="da">&copy; 2026 Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes.</span>
+      <span lang="en">&copy; 2026 Kristian Dahlmann Oddershede — All rights reserved.</span>
+    </div>
   </footer>
 
   <script>
+    // === Header scroll behavior ===
     const header = document.getElementById('siteHeader');
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 15);
     });
-   
-    const translations = {
-      da: {
-        nav: ["Forside", "Fokusområder", "Min Tilgang", "Kontakt"],
-        heroKicker: "Science Communication & Training",
-        heroTitle: "Lær at gøre det komplekse uforglemmeligt",
-        heroLead1: "God formidling handler ikke om at forenkle sandheden, men om at gøre den tilgængelig. Jeg hjælper eksperter, studerende og organisationer med at mestre kunsten at tale om videnskab.",
-        heroLead2: "Baseret på min erfaring med at træne guider og formidlere ved CERN, tilbyder jeg skræddersyede workshops, der kombinerer teori med praktiske øvelser. Vi dykker ned i alt fra historiefortælling til kropssprog og teknikker til at håndtere svære spørgsmål.",
-        bookBtn: "Book en workshop",
-   
-        servicesTitle: "Workshops & Foredrag",
-        servicesText: "Praktisk træning designet til at løfte jeres formidlingsevner med det samme.",
-        s1: ["Fra Ekspert til Formidler", "En workshop for forskere og specialister. Vi arbejder med at identificere kernebudskabet og fjerne de barriere, der står i vejen for en god forståelse hos modtageren."],
-        s2: ["Træning af Formidlere", "Lær de teknikker, jeg har brugt til at træne science-guider ved CERN. Fokus på engagement, værtskab og evnen til at forklare det usynlige."],
-        s3: ["Storytelling i Science", "Hvordan bruger vi narrativer til at skabe fascination? Et foredrag om hvorfor menneskehjernen elsker historier, og hvordan vi bruger det til at huske data."],
-   
-        aboutTitle: "Min Tilgang",
-        aboutP1: "Min undervisning tager udgangspunkt i 'Learning by Doing'. Formidling er en muskel, der skal trænes.",
-        aboutList: [
-          "Evidensbaseret: Jeg trækker på pædagogiske principper og viden om kognitiv psykologi for at sikre, at budskaberne hænger ved.",
-          "Interaktivt: Mine workshops er aldrig bare et slideshow. Vi arbejder med praktiske scenarier og direkte feedback.",
-          "Fra CERN til klasseværelset: Jeg har erfaring med at træne folk til at tale foran alt fra Nobelprismodtagere til skoleklasser."
-        ],
-   
-        contactTitle: "Vil I styrke jeres stemme?",
-        contactText: "Kontakt mig for at høre mere om, hvordan vi kan skræddersy et forløb til jeres team eller institution.",
-        contactBtn: "Kontakt mig",
-        footer: "© 2025 Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes."
-      },
-   
-      en: {
-        nav: ["Home", "Focus Areas", "My Approach", "Contact"],
-        heroKicker: "Science Communication & Training",
-        heroTitle: "Learn to make the complex unforgettable",
-        heroLead1: "Great communication isn't about oversimplifying the truth; it's about making it accessible. I help experts, students, and organizations master the art of talking about science.",
-        heroLead2: "Based on my experience training guides and communicators at CERN, I offer tailored workshops that blend theory with practical exercises. We explore everything from storytelling to body language and techniques for handling tough questions.",
-        bookBtn: "Book a workshop",
-   
-        servicesTitle: "Workshops & Talks",
-        servicesText: "Hands-on training designed to elevate your communication skills immediately.",
-        s1: ["From Expert to Communicator", "A workshop for researchers and specialists. We work on identifying the core message and removing the barriers that prevent clear understanding."],
-        s2: ["Training Communicators", "Learn the techniques I used to train science guides at CERN. Focus on engagement, hospitality, and the ability to explain the invisible."],
-        s3: ["Storytelling in Science", "How do we use narratives to spark fascination? A talk on why the human brain loves stories and how we use them to make data memorable."],
-   
-        aboutTitle: "My Approach",
-        aboutP1: "My teaching is based on 'Learning by Doing'. Communication is a muscle that needs to be exercised.",
-        aboutList: [
-          "Evidence-based: I draw on pedagogical principles and cognitive psychology to ensure your message sticks.",
-          "Interactive: My workshops are never just a slideshow. We work with practical scenarios and real-time feedback.",
-          "From CERN to the classroom: I have experience training people to speak before everyone from Nobel laureates to primary school students."
-        ],
-   
-        contactTitle: "Want to strengthen your voice?",
-        contactText: "Contact me to learn more about how we can tailor a program for your team or institution.",
-        contactBtn: "Contact me",
-        footer: "© 2025 Kristian Dahlmann Oddershede — All rights reserved."
-      }
-    };
-   
+    
+    // === Apply translations by toggling the html attribute ===
     function applyLanguage(lang) {
-      const t = translations[lang];
-      if (!t) return;
-   
-      document.querySelector('.kicker').textContent = t.heroKicker;
-      document.querySelector('h1.hero-title').textContent = t.heroTitle;
-      const leads = document.querySelectorAll('.lead');
-      leads[0].textContent = t.heroLead1;
-      leads[1].textContent = t.heroLead2;
-      document.querySelector('.btn').textContent = t.bookBtn;
-      const nav = document.querySelectorAll('nav.primary-nav a');
-      nav.forEach((a, i) => (a.textContent = t.nav[i]));
-   
-      document.querySelector('#fokus h2').textContent = t.servicesTitle;
-      document.querySelector('#fokus p.muted').textContent = t.servicesText;
-      const f = document.querySelectorAll('#fokus .service');
-      f[0].querySelector('h3').textContent = t.s1[0];
-      f[0].querySelector('p').textContent = t.s1[1];
-      f[1].querySelector('h3').textContent = t.s2[0];
-      f[1].querySelector('p').textContent = t.s2[1];
-      f[2].querySelector('h3').textContent = t.s3[0];
-      f[2].querySelector('p').textContent = t.s3[1];
-   
-      document.querySelector('#erfaring h2').textContent = t.aboutTitle;
-      document.querySelector('#erfaring p.muted').textContent = t.aboutP1;
-      const aboutLis = document.querySelectorAll('#erfaring li');
-      aboutLis.forEach((li, i) => {
-        const parts = t.aboutList[i].split(':');
-        li.innerHTML = `<strong>${parts[0]}:</strong>${parts.slice(1).join(':')}`;
+      document.documentElement.setAttribute('lang', lang);
+      
+      // Update button transparency based on selected language
+      buttons.forEach(btn => {
+        btn.style.opacity = btn.dataset.lang === lang ? '1' : '0.5';
       });
-   
-      const contact = document.querySelector('#kontakt');
-      contact.querySelector('h3').textContent = t.contactTitle;
-      contact.querySelector('p').textContent = t.contactText;
-      contact.querySelector('.btn').textContent = t.contactBtn;
-      document.querySelector('footer.site-footer div').textContent = t.footer;
     }
-   
+    
+    // === Initialize language switching ===
     const buttons = document.querySelectorAll('#lang-switcher button');
     const savedLang = localStorage.getItem('lang') || 'da';
+    
     applyLanguage(savedLang);
+    
     buttons.forEach(btn => {
-      btn.style.opacity = btn.dataset.lang === savedLang ? '1' : '0.5';
       btn.addEventListener('click', e => {
-        const lang = e.target.dataset.lang;
+        const lang = e.currentTarget.dataset.lang;
         localStorage.setItem('lang', lang);
-        buttons.forEach(b => (b.style.opacity = b.dataset.lang === lang ? '1' : '0.5'));
         applyLanguage(lang);
       });
     });
