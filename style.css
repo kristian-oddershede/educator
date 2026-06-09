@@ -290,9 +290,15 @@ footer.site-footer{
 }
 
 /* Spejlvending af hero-sektionen (billede til venstre på computerskærme) */
-@media (min-width: 769px) {
+@media (min-width: 981px) {
   .hero.hero-reversed {
-    flex-direction: row-reverse;
+    grid-template-columns: 420px 1fr;
+  }
+  .hero.hero-reversed .hero-left {
+    grid-column: 2;
+  }
+  .hero.hero-reversed .hero-right {
+    grid-column: 1;
   }
 }
 
