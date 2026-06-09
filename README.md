@@ -1,1 +1,7 @@
-This project is a private project for the purpose of trying out how to make a website, and the current test is a self promoting website.
+**Read me**
+
+This project is a private project, to create a website for self-promoting in freelance work.
+
+I uphold all rights to images used, and any contact information presented.  
+
+The page icon is from freepik.com.
