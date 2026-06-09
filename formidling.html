@@ -14,32 +14,80 @@
     /* Sprogstyring: Skjul automatisk det sprog, der ikke er aktivt */
     html[lang="da"] [lang="en"] { display: none !important; }
     html[lang="en"] [lang="da"] { display: none !important; }
+
+    /* Unik Science-identitet: Mørkt, højteknologisk og skarpt */
+    :root {
+      --science-dark: #0f172a; /* Dyb rums-blå/skifer */
+      --science-accent: #3b82f6; /* Lysende science-blå */
+      --science-light: #f8fafc;
+    }
+
+    body.science-page {
+      background-color: var(--science-light);
+    }
+
+    .science-hero {
+      background: linear-gradient(180deg, var(--science-dark) 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 9rem var(--container-padding) 5rem;
+      margin-bottom: 3rem;
+    }
+
+    .science-hero .kicker {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+    }
+
+    .science-hero h1.hero-title {
+      color: #ffffff;
+    }
+
+    .science-hero p.lead {
+      color: #94a3b8;
+    }
+
+    .science-hero .portrait-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .approach-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(15,23,42,0.02);
+      border: 1px solid rgba(15,23,42,0.04);
+    }
+
+    .approach-card h4 {
+      margin-top: 0;
+      color: var(--science-dark);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
   </style>
 </head>
-<body>
-  <header class="site-header" id="siteHeader">
+<body class="science-page">
+  <header class="site-header scrolled" id="siteHeader" style="background: rgba(15,23,42,0.95); border-bottom: 1px solid rgba(255,255,255,0.05);">
     <div class="header-inner">
-      <div class="brand" aria-hidden="false">
+      <div class="brand">
         <img src="figures/picture from linkedin.png" alt="Kristian Dahlmann Oddershede profile photo">
-        <div class="name">Kristian D. Oddershede</div>
+        <div class="name" style="color: #ffffff;">Kristian D. Oddershede</div>
       </div>
 
       <nav class="primary-nav" aria-label="Main navigation">
-        <a href="index.html">
-          <span lang="da">Forside</span>
-          <span lang="en">Home</span>
-        </a>
-        <a href="#fokus">
-          <span lang="da">Fokusområder</span>
-          <span lang="en">Focus Areas</span>
-        </a>
-        <a href="#erfaring">
-          <span lang="da">Min Tilgang</span>
-          <span lang="en">My Approach</span>
-        </a>
-        <a href="#kontakt">
-          <span lang="da">Kontakt</span>
-          <span lang="en">Contact</span>
+        <a href="index.html" style="color: #94a3b8;">
+          <span lang="da">← Hovedside</span>
+          <span lang="en">← Main Page</span>
         </a>
       </nav>
 
@@ -49,154 +97,145 @@
       </div>
 
       <div class="header-cta">
-        <a class="button email" href="mailto:kristian.possum@gmail.com" title="Send email" aria-label="Send email">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-            <path d="M3 7l9 6 9-6"></path>
-          </svg>
-        </a>
-        <a class="button linkedin" href="https://www.linkedin.com/in/kristian-dahlmann-oddershede-b5703a217/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect x="2" y="9" width="4" height="12"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
+        <a class="button email" href="mailto:kristian.possum@gmail.com" title="Send email" style="background: var(--science-accent);">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
         </a>
       </div>
     </div>
   </header>
 
-  <main class="page" id="top">
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-left">
-        <div class="kicker">Science Communication & Training</div>
-        <h1 class="hero-title" id="heroTitle">
-          <span lang="da">Lær at gøre det komplekse uforglemmeligt</span>
-          <span lang="en">Learn to make the complex unforgettable</span>
-        </h1>
-        <p class="lead">
-          <span lang="da">God formidling handler ikke om at forenkle sandheden, men om at gøre den tilgængelig. Jeg hjælper eksperter, studerende og organisationer med at mestre kunsten at tale om videnskab.</span>
-          <span lang="en">Great communication isn't about oversimplifying the truth; it's about making it accessible. I help experts, students, and organizations master the art of talking about science.</span>
-        </p>
-         
-        <p class="lead">
-          <span lang="da">Baseret på min erfaring med at træne guider og formidlere ved <strong>CERN</strong>, tilbyder jeg skræddersyede workshops, der kombinerer teori med praktiske øvelser. Vi dykker ned i alt fra historiefortælling til kropssprog og teknikker til at håndtere svære spørgsmål.</span>
-          <span lang="en">Based on my experience training guides and communicators at <strong>CERN</strong>, I offer tailored workshops that blend theory with practical exercises. We explore everything from storytelling to body language and techniques for handling tough questions.</span>
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn" href="mailto:kristian.possum@gmail.com" title="Book a session">
-            <span lang="da">Book en workshop</span>
-            <span lang="en">Book a workshop</span>
-          </a>
+  <main>
+    <!-- HERO SEKTION (MØRKT DESIGN) -->
+    <section class="science-hero">
+      <div style="max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 2rem; align-items: center;">
+        <div class="hero-left">
+          <div class="kicker">Science Communication & Training</div>
+          <h1 class="hero-title" id="heroTitle" style="text-transform: lowercase; font-weight: 800;">
+            <span lang="da">formidling så folk lytter.</span>
+            <span lang="en">communication that connects.</span>
+          </h1>
+          <p class="lead">
+            <span lang="da">God videnskabsformidling handler ikke om at banalisere sandheden, men om at gøre den levende. Jeg træner eksperter, studerende og organisationer i at mestre kunsten at tale om kompleks viden.</span>
+            <span lang="en">Great science communication isn't about dumbing down the truth; it's about making it catch fire. I train experts, students, and organizations to master the art of translating complex data.</span>
+          </p>
+          <p class="lead">
+            <span lang="da">Med afsæt i mine erfaringer med at uddanne formidlere og guider hos <strong>CERN</strong>, tilbyder jeg hæsblæsende og praktiske workshops. Vi skræller det unødvendige fra og bygger bro mellem hardcore data og fængende historiefortælling.</span>
+            <span lang="en">Drawing on my background training communicators and guides at <strong>CERN</strong>, I run high-impact, hands-on workshops. We strip away the fluff and build direct bridges between heavy metrics and unforgettable storytelling.</span>
+          </p>
         </div>
-      </div>
 
-      <div class="hero-right" aria-hidden="false">
-        <div class="portrait-card" role="img" aria-label="Kristian speaking at a conference">
-          <img src="figures/GivDeUngeOrdet_Workshop_23Marts2022_000-17.jpg" alt="Kristian Oddershede giving a talk">
-          <div class="portrait-overlay">
-            <div class="meta">
-              <div style="font-size:0.95rem;font-weight:700">Kristian D. Oddershede</div>
-              <div style="font-size:0.82rem;color:rgba(255,255,255,0.9)">Science Communication Expert</div>
+        <div class="hero-right" aria-hidden="false">
+          <div class="portrait-card" role="img" aria-label="Kristian speaking at a conference">
+            <img src="figures/GivDeUngeOrdet_Workshop_23Marts2022_000-17.jpg" alt="Kristian Oddershede giving a talk">
+            <div class="portrait-overlay">
+              <div class="meta">
+                <div style="font-size:0.95rem;font-weight:700">Kristian D. Oddershede</div>
+                <div style="font-size:0.82rem;color:rgba(255,255,255,0.7)">Science Communication Expert</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="fokus" class="card" aria-labelledby="servicesTitle">
-      <h2 id="servicesTitle">
-        <span lang="da">Workshops & Foredrag</span>
-        <span lang="en">Workshops & Talks</span>
-      </h2>
-      <p class="muted">
-        <span lang="da">Praktisk træning designet til at løfte jeres formidlingsevner med det samme.</span>
-        <span lang="en">Hands-on training designed to elevate your communication skills immediately.</span>
-      </p>
+    <!-- WORKSHOPS & FOREDRAG -->
+    <div class="page" style="padding-top: 0; max-width: var(--max-width); margin: 0 auto;">
+      <section id="fokus" aria-labelledby="servicesTitle">
+        <h2 id="servicesTitle" style="margin-bottom: 0.5rem; font-weight: 800;">
+          <span lang="da">Målrettede Formater</span>
+          <span lang="en">Targeted Formats</span>
+        </h2>
+        <p class="muted" style="margin-bottom: 2.5rem;">
+          <span lang="da">Praktisk, interaktiv træning udviklet til at transformere jeres formidling med det samme.</span>
+          <span lang="en">Hands-on, interactive training built to instantly transform how you pitch and present.</span>
+        </p>
 
-      <div class="services-grid" style="margin-top:1rem">
-        <article class="service" aria-labelledby="s1">
-          <h3 id="s1">
-            <span lang="da">Fra Ekspert til Formidler</span>
-            <span lang="en">From Expert to Communicator</span>
-          </h3>
-          <p>
-            <span lang="da">En workshop for forskere og specialister. Vi arbejder med at identificere kernebudskabet og fjerne de barriere, der står i vejen for en god forståelse hos modtageren.</span>
-            <span lang="en">A workshop for researchers and specialists. We work on identifying the core message and removing the barriers that prevent clear understanding.</span>
-          </p>
-        </article>
-        <article class="service" aria-labelledby="s2">
-          <h3 id="s2">
-            <span lang="da">Træning af Formidlere</span>
-            <span lang="en">Training Communicators</span>
-          </h3>
-          <p>
-            <span lang="da">Lær de teknikker, jeg har brugt til at træne science-guider ved CERN. Fokus på engagement, værtskab og evnen til at forklare det usynlige.</span>
-            <span lang="en">Learn the techniques I used to train science guides at CERN. Focus on engagement, hospitality, and the ability to explain the invisible.</span>
-          </p>
-        </article>
-        <article class="service" aria-labelledby="s3">
-          <h3 id="s3">
-            <span lang="da">Storytelling i Science</span>
-            <span lang="en">Storytelling in Science</span>
-          </h3>
-          <p>
-            <span lang="da">Hvordan bruger vi narrativer til at skabe fascination? Et foredrag om hvorfor menneskehjernen elsker historier, og hvordan vi bruger det til at huske data.</span>
-            <span lang="en">How do we use narratives to spark fascination? A talk on why the human brain loves stories and how we use them to make data memorable.</span>
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="erfaring" class="card" aria-labelledby="aboutTitle">
-      <h2 id="aboutTitle">
-        <span lang="da">Min Tilgang</span>
-        <span lang="en">My Approach</span>
-      </h2>
-      <p class="muted">
-        <span lang="da">Min undervisning tager udgangspunkt i "Learning by Doing". Formidling er en muskel, der skal trænes.</span>
-        <span lang="en">My teaching is based on "Learning by Doing". Communication is a muscle that needs to be exercised.</span>
-      </p> 
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
-        <ul style="padding-left:1.05rem;color:var(--muted)"> 
-          <li>
-            <span lang="da"><strong>Evidensbaseret:</strong> Jeg trækker på pædagogiske principper og viden om kognitiv psykologi for at sikre, at budskaberne hænger ved.</span>
-            <span lang="en"><strong>Evidence-based:</strong> I draw on pedagogical principles and cognitive psychology to ensure your message sticks.</span>
-          </li> 
-          <li>
-            <span lang="da"><strong>Interaktivt:</strong> Mine workshops er aldrig bare et slideshow. Vi arbejder med praktiske scenarier og direkte feedback.</span>
-            <span lang="en"><strong>Interactive:</strong> My workshops are never just a slideshow. We work with practical scenarios and real-time feedback.</span>
-          </li> 
-          <li>
-            <span lang="da"><strong>Fra CERN til klasseværelset:</strong> Jeg har erfaring med at træne folk til at tale foran alt fra Nobelprismodtagere til skoleklasser.</span>
-            <span lang="en"><strong>From CERN to the classroom:</strong> I have experience training people to speak before everyone from Nobel laureates to primary school students.</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="kontakt" class="card">
-      <div class="book-strip">
-        <div>
-          <h3>
-            <span lang="da">Vil I styrke jeres stemme?</span>
-            <span lang="en">Want to strengthen your voice?</span>
-          </h3>
-          <p>
-            <span lang="da">Kontakt mig for at høre mere om, hvordan vi kan skræddersy et forløb til jeres team eller institution.</span>
-            <span lang="en">Contact me to learn more about how we can tailor a program for your team or institution.</span>
-          </p>
+        <div class="services-grid">
+          <article class="service card" style="border-top: 4px solid var(--science-accent);">
+            <h3>
+              <span lang="da">Fra Ekspert til Formidler</span>
+              <span lang="en">From Expert to Communicator</span>
+            </h3>
+            <p>
+              <span lang="da">Skræddersyet til forskere og specialister. Vi lokaliserer jeres absolutte kernebudskab og nedbryder de barrierer og akademiske vaner, der blokerer for modtagerens forståelse.</span>
+              <span lang="en">Tailored for researchers and specialists. We zero in on your core message and dissolve the academic friction and habits that block clear, public comprehension.</span>
+            </p>
+          </article>
+          
+          <article class="service card" style="border-top: 4px solid var(--science-accent);">
+            <h3>
+              <span lang="da">Træning af Formidlere</span>
+              <span lang="en">Training Communicators</span>
+            </h3>
+            <p>
+              <span lang="da">Få adgang til de konkrete formidlingsteknikker, jeg implementerede hos CERN. Vi fokuserer intensivt på personligt værtsskab, kropssprog og kunsten at forklare det usynlige.</span>
+              <span lang="en">Access the concrete pedagogical toolkits I built for CERN. We focus heavily on personal hosting, stage presence, and the art of visualizing the invisible.</span>
+            </p>
+          </article>
+          
+          <article class="service card" style="border-top: 4px solid var(--science-accent);">
+            <h3>
+              <span lang="da">Storytelling i Science</span>
+              <span lang="en">Storytelling in Science</span>
+            </h3>
+            <p>
+              <span lang="da">Et tempofyldt foredrag om, hvorfor den menneskelige hjerne reagerer så kraftigt på narrativer, og hvordan jeres organisation bruger dramaturgi til at gøre rå data mindeværdige.</span>
+              <span lang="en">A high-velocity talk on why the human brain is hardwired for narrative structure, and how your team can use dramaturgy to make dry data impossible to forget.</span>
+            </p>
+          </article>
         </div>
-        <a class="btn" href="mailto:kristian.possum@gmail.com">
-          <span lang="da">Kontakt mig</span>
-          <span lang="en">Contact me</span>
-        </a>
-      </div>
-    </section>
+      </section>
+
+      <!-- MIN TILGANG -->
+      <section id="erfaring" style="margin-top: 6rem;">
+        <h2 id="aboutTitle" style="margin-bottom: 0.5rem; font-weight: 800;">
+          <span lang="da">Metoden bag</span>
+          <span lang="en">The Method</span>
+        </h2>
+        <p class="muted" style="margin-bottom: 2.5rem;">
+          <span lang="da">Formidling er ikke et talent – det er en muskel, der skal tæskes igennem i praksis. Min tilgang er centreret omkring "Learning by Doing".</span>
+          <span lang="en">Communication isn't an innate talent – it's a muscle that needs resistance training. My framework is built on absolute "Learning by Doing".</span>
+        </p> 
+        
+        <div class="approach-grid">
+          <div class="approach-card">
+            <h4><span lang="da">01. Evidensbaseret</span><span lang="en">01. Evidence-Based</span></h4>
+            <p><span lang="da">Ingen mavefornemmelser. Vi trækker direkte på kognitiv psykologi og pædagogiske principper, der beviseligt sikrer, at budskabet lagrer sig solidt i modtagerens hukommelse.</span><span lang="en">No guesswork. We rely directly on cognitive psychology and educational frameworks proven to embed complex structures deeply into audience memory.</span></p>
+          </div>
+          <div class="approach-card">
+            <h4><span lang="da">02. 100% Interaktivt</span><span lang="en">02. 100% Interactive</span></h4>
+            <p><span lang="da">Glem alt om kedelige slideshows. Mine workshops tvinger deltagerne på gulvet med det samme gennem simulererede scenarier og benhård, konstruktiv realtids-feedback.</span><span lang="en">Forget bullet-point monologues. My sessions push participants onto the floor immediately with live situational drills and rigorous, constructive feedback loops.</span></p>
+          </div>
+          <div class="approach-card">
+            <h4><span lang="da">03. International Tyngde</span><span lang="en">03. Elite Experience</span></h4>
+            <p><span lang="da">Fra Nobelprismodtagere til folkeskoleklasser. Metoderne er testet og slebet til i miljøer, hvor barren er sat ekstremt højt, og hvor målgrupperne spænder utrolig bredt.</span><span lang="en">From Nobel laureates to school classes. These strategies are refined in world-class ecosystems where standards are hyper-critical and audiences shift constantly.</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RENSET KONTAKT STRIP (KUN ÉN DEDIKERET CTA) -->
+      <section id="kontakt" class="card" style="margin-top: 6rem; background: var(--science-dark); color: white; border: none;">
+        <div class="book-strip" style="background: none; padding: 2rem 1rem;">
+          <div style="max-width: 600px;">
+            <h3 style="color: white; font-size: 1.7rem; margin-bottom: 0.5rem; font-weight: 800;">
+              <span lang="da">Vil I styrke jeres stemme?</span>
+              <span lang="en">Ready to amplify your message?</span>
+            </h3>
+            <p style="color: #94a3b8; margin: 0;">
+              <span lang="da">Lad os skræddersy et forløb eller en workshop, der passer præcis til jeres team, forskningsgruppe eller institution.</span>
+              <span lang="en">Let's map out a specialized roadmap or masterclass engineered directly for your team or department.</span>
+            </p>
+          </div>
+          <a class="btn" href="mailto:kristian.possum@gmail.com" style="background: var(--science-accent); color: white; padding: 1rem 2rem; font-size: 1rem; border-radius: 10px; font-weight: 700;">
+            <span lang="da">Start dialogen</span>
+            <span lang="en">Let's talk</span>
+          </a>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" style="margin-top: 6rem;">
     <div>
       <span lang="da">&copy; 2026 Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes.</span>
       <span lang="en">&copy; 2026 Kristian Dahlmann Oddershede — All rights reserved.</span>
@@ -209,26 +248,22 @@
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 15);
     });
-    
-    // === Apply translations by toggling the html attribute ===
+     
+    // === Apply translations ===
     function applyLanguage(lang) {
       document.documentElement.setAttribute('lang', lang);
-      
-      // Update button transparency based on selected language
       buttons.forEach(btn => {
         btn.style.opacity = btn.dataset.lang === lang ? '1' : '0.5';
       });
     }
-    
-    // === Initialize language switching ===
+     
     const buttons = document.querySelectorAll('#lang-switcher button');
     const savedLang = localStorage.getItem('lang') || 'da';
-    
     applyLanguage(savedLang);
-    
+     
     buttons.forEach(btn => {
       btn.addEventListener('click', e => {
-        const lang = e.currentTarget.dataset.lang;
+        const lang = e.currentTarget.dataset.lang || (e.currentTarget.innerText === '🇩🇰' ? 'da' : 'en');
         localStorage.setItem('lang', lang);
         applyLanguage(lang);
       });
