@@ -334,3 +334,34 @@ footer.site-footer{
     padding-left: 0;
   }
 }
+
+
+/* ==========================================================================
+   Moderater side tweaks
+   ========================================================================== */
+/* Moderator-specifikke tweaks */
+.moderator-page .card {
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.moderator-page .card:hover {
+  transform: translateY(-5px);
+}
+
+.moderator-page h4 {
+  margin-top: 0;
+  color: var(--mod-accent);
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Gør den specielle portrætform pæn på mobil */
+@media (max-width: 980px) {
+  .moderator-page .portrait-card {
+    border-radius: 16px !important;
+  }
+  .moderator-page .portrait-card img {
+    border-radius: 16px !important;
+  }
+}
