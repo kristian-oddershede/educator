@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -12,6 +12,12 @@
 
   <!-- External Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Sprogstyring: Skjul automatisk det sprog, der ikke er aktivt */
+    html[lang="da"] [lang="en"] { display: none !important; }
+    html[lang="en"] [lang="da"] { display: none !important; }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -23,10 +29,10 @@
       </div>
 
       <nav class="primary-nav" aria-label="Main navigation">
-        <a href="index.html">Forside</a>
-        <a href="#ydelser">Ydelser</a>
-        <a href="#hvorfor-mig">Hvorfor mig?</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="index.html">
+          <span lang="da">Forside</span>
+          <span lang="en">Home</span>
+        </a>
       </nav>
 
       <div id="lang-switcher" style="display:flex; gap:0.4rem; align-items:center;">
@@ -60,26 +66,37 @@
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-left">
         <div class="kicker">Moderator & Facilitator</div>
-        <h1 class="hero-title" id="heroTitle">Skab tryghed, retning og engagement på jeres næste event</h1>
+        <h1 class="hero-title" id="heroTitle">
+          <span lang="da">Skab tryghed, retning og engagement på jeres næste event</span>
+          <span lang="en">Bring focus, flow, and engagement to your next event</span>
+        </h1>
         <p class="lead">
-          Som moderator og facilitator er min fornemmeste opgave at få jeres indhold til at skinne og jeres talere til at føle sig trygge.
+          <span lang="da">Som moderator og facilitator er min fornemmeste opgave at få jeres indhold til at skinne og jeres talere til at føle sig trygge.</span>
+          <span lang="en">As a moderator and facilitator, my primary goal is to make your content shine and ensure your speakers feel confident and supported.</span>
         </p>
          
         <p class="lead">
-          Med solid erfaring i at lede alt fra intime workshops til store konferencer, sørger jeg for, at den røde tråd holdes, energien bevares, og at publikum bliver inddraget. Det handler ikke kun om at holde tidsplanen — det handler om at skabe et rum, hvor ægte viden og dialog opstår.
+          <span lang="da">Med solid erfaring i at lede alt fra intime workshops til store konferencer, sørger jeg for, at den røde tråd holdes, energien bevares, og at publikum bliver inddraget. Det handler ikke kun om at holde tidsplanen — det handler om at skabe et rum, hvor ægte viden og dialog opstår.</span>
+          <span lang="en">With extensive experience guiding everything from intimate workshops to large conferences, I ensure the red thread is maintained, the energy stays high, and the audience remains engaged. It's not just about keeping the schedule on track — it's about creating a space where genuine dialogue and learning occur.</span>
         </p>
 
         <div class="hero-actions">
-          <a class="btn" href="mailto:kristian.possum@gmail.com" title="Book a session">Book en samtale</a>
+          <a class="btn" href="mailto:kristian.possum@gmail.com" title="Book a session">
+            <span lang="da">Book en samtale</span>
+            <span lang="en">Book a chat</span>
+          </a>
         </div>
 
-        <div class="cta-note muted">Tip: Skriv gerne et par linjer om eventets tema, dato og format — så vender jeg hurtigt tilbage med et forslag.</div>
+        <div class="cta-note muted">
+          <span lang="da">Tip: Skriv gerne et par linjer om eventets tema, dato og format — så vender jeg hurtigt tilbage med et forslag.</span>
+          <span lang="en">Tip: Include a few lines about the event topic, date, and format — I’ll get back to you soon with a tailored suggestion.</span>
+        </div>
       </div>
 
       <div class="hero-right" aria-hidden="false">
         <div class="portrait-card" role="img" aria-label="Kristian facilitating a workshop">
           <!-- Using the requested image -->
-          <img src="figures/GivDeUngeOrdet_Workshop_23Marts2022_000-153.jpg" alt="Teaching and facilitating session with Kristian Oddershede">
+          <img src="figures/GivDeUngeOrdet_Workshop_23Marts2022_000-154.jpg" alt="Facilitation by Kristian Oddershede">
           <div class="portrait-overlay">
             <div class="meta">
               <div style="font-size:0.95rem;font-weight:700">Kristian D. Oddershede</div>
@@ -92,21 +109,45 @@
 
     <!-- Ydelser -->
     <section id="ydelser" class="card" aria-labelledby="servicesTitle">
-      <h2 id="servicesTitle">Ydelser</h2>
-      <p class="muted">Jeg tilpasser min rolle 100 % efter jeres formål og målgruppe.</p>
+      <h2 id="servicesTitle">
+        <span lang="da">Ydelser</span>
+        <span lang="en">Services</span>
+      </h2>
+      <p class="muted">
+        <span lang="da">Jeg tilpasser min rolle 100 % efter jeres formål og målgruppe.</span>
+        <span lang="en">I tailor my role 100% to fit your goals and your audience.</span>
+      </p>
 
       <div class="services-grid" style="margin-top:1rem">
         <article class="service" aria-labelledby="s1">
-          <h3 id="s1">Konferencemoderator</h3>
-          <p>Jeg binder dagen sammen, introducerer talere med overskud og sørger for, at den røde tråd og tidsplanen overholdes, uden at det føles stramt eller forhastet.</p>
+          <h3 id="s1">
+            <span lang="da">Konferencemoderator</span>
+            <span lang="en">Conference Moderator</span>
+          </h3>
+          <p>
+            <span lang="da">Jeg binder dagen sammen, introducerer talere med overskud og sørger for, at den røde tråd og tidsplanen overholdes, uden at det føles stramt eller forhastet.</span>
+            <span lang="en">I connect the dots throughout the day, introduce speakers with enthusiasm, and ensure the schedule runs smoothly without ever feeling rushed.</span>
+          </p>
         </article>
         <article class="service" aria-labelledby="s2">
-          <h3 id="s2">Workshop Facilitator</h3>
-          <p>Jeg skaber de trygge rammer, der skal til, for at en gruppe kan samarbejde effektivt, nå deres mål og få alle de vigtige perspektiver på bordet.</p>
+          <h3 id="s2">
+            <span lang="da">Workshop Facilitator</span>
+            <span lang="en">Workshop Facilitator</span>
+          </h3>
+          <p>
+            <span lang="da">Jeg skaber de trygge rammer, der skal til, for at en gruppe kan samarbejde effektivt, nå deres mål og få alle de vigtige perspektiver på bordet.</span>
+            <span lang="en">I create the safe framework necessary for a group to collaborate effectively, reach their goals, and ensure all important voices are heard.</span>
+          </p>
         </article>
         <article class="service" aria-labelledby="s3">
-          <h3 id="s3">Paneldebatter</h3>
-          <p>Jeg styrer paneldebatter, så de bliver dynamiske, retfærdige og skarpe. Gæsterne bliver fagligt udfordret, og publikum får konkret værdi og indsigter med hjem.</p>
+          <h3 id="s3">
+            <span lang="da">Paneldebatter</span>
+            <span lang="en">Panel Discussions</span>
+          </h3>
+          <p>
+            <span lang="da">Jeg styrer paneldebatter, så de bliver dynamiske, retfærdige og skarpe. Gæsterne bliver fagligt udfordret, og publikum får konkret værdi og indsigter med hjem.</span>
+            <span lang="en">I guide panel discussions to be dynamic, fair, and sharp. Guests are professionally challenged, and the audience leaves with concrete value and insights.</span>
+          </p>
         </article>
       </div>
     </section>
@@ -115,14 +156,27 @@
     <section id="hvorfor-mig" class="card" aria-labelledby="aboutTitle">
       <div style="display:grid; grid-template-columns:1fr; gap:1rem;">
         <div>
-          <h2 id="aboutTitle">Hvorfor vælge mig?</h2>
+          <h2 id="aboutTitle">
+            <span lang="da">Hvorfor vælge mig?</span>
+            <span lang="en">Why choose me?</span>
+          </h2>
           <p class="muted">
-            Det kræver mere end blot at kunne tale i en mikrofon foran en forsamling at være en god moderator. Det kræver evnen til at lytte dybt, improvisere i øjeblikket og løbende læse rummet.
+            <span lang="da">Det kræver mere end blot at kunne tale i en mikrofon foran en forsamling at være en god moderator. Det kræver evnen til at lytte dybt, improvisere i øjeblikket og løbende læse rummet.</span>
+            <span lang="en">Being a great moderator requires much more than simply speaking into a microphone. It demands the ability to listen deeply, improvise in the moment, and constantly read the room.</span>
           </p> 
           <ul style="margin-top:0.8rem;padding-left:1.05rem;color:var(--muted)"> 
-            <li><strong>Tryghed for talerne:</strong> Jeg tager altid dialogen med jeres oplægsholdere på forhånd. Når de står på scenen, ved de, at de er i trygge hænder og kan fokusere på deres faglighed.</li> 
-            <li><strong>Faglig tyngde og nysgerrighed:</strong> Med min naturvidenskabelige baggrund (cand.scient. i fysik) er jeg vant til at sætte mig lynhurtigt ind i komplekst stof. Jeg stiller de spørgsmål, som publikum brænder for at få besvaret.</li> 
-            <li><strong>Publikumsinddragelse:</strong> En envejs-præsentation kan hurtigt miste energien. Jeg ved, hvordan man bryder isen, faciliterer spørgerunder og gør tilhørerne til en aktiv, tænkende del af jeres event.</li>
+            <li>
+              <span lang="da"><strong>Tryghed for talerne:</strong> Jeg tager altid dialogen med jeres oplægsholdere på forhånd. Når de står på scenen, ved de, at de er i trygge hænder og kan fokusere på deres faglighed.</span>
+              <span lang="en"><strong>Security for the speakers:</strong> I always connect with your presenters beforehand. When they step on stage, they know they are in safe hands and can focus purely on their expertise.</span>
+            </li> 
+            <li>
+              <span lang="da"><strong>Faglig tyngde og nysgerrighed:</strong> Med min naturvidenskabelige baggrund (cand.scient. i fysik) er jeg vant til at sætte mig lynhurtigt ind i komplekst stof. Jeg stiller de spørgsmål, som publikum brænder for at få besvaret.</span>
+              <span lang="en"><strong>Academic depth and curiosity:</strong> With my background in science (MSc in Physics), I am used to quickly grasping complex material. I ask the questions the audience is dying to have answered.</span>
+            </li> 
+            <li>
+              <span lang="da"><strong>Publikumsinddragelse:</strong> En envejs-præsentation kan hurtigt miste energien. Jeg ved, hvordan man bryder isen, faciliterer spørgerunder og gør tilhørerne til en aktiv, tænkende del af jeres event.</span>
+              <span lang="en"><strong>Audience engagement:</strong> A one-way presentation can quickly lose its energy. I know how to break the ice, facilitate Q&A sessions, and make the audience an active, thinking part of your event.</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -132,16 +186,28 @@
     <section id="kontakt" class="card">
       <div class="book-strip">
         <div>
-          <h3>Skal jeg styre slagets gang?</h3>
-          <p>Send mig en email — lad os tage en uforpligtende snak om, hvordan jeg kan bidrage til jeres næste arrangement.</p>
+          <h3>
+            <span lang="da">Skal jeg styre slagets gang?</span>
+            <span lang="en">Need someone to steer the ship?</span>
+          </h3>
+          <p>
+            <span lang="da">Send mig en email — lad os tage en uforpligtende snak om, hvordan jeg kan bidrage til jeres næste arrangement.</span>
+            <span lang="en">Send me an email — let's have a non-binding chat about how I can contribute to your next event.</span>
+          </p>
         </div>
-        <a class="btn" href="mailto:kristian.possum@gmail.com">Kontakt mig</a>
+        <a class="btn" href="mailto:kristian.possum@gmail.com">
+          <span lang="da">Kontakt mig</span>
+          <span lang="en">Contact me</span>
+        </a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div>&copy; 2025 Kristian Dahlmann Oddershede — All rights reserved.</div>
+    <div>
+      <span lang="da">&copy; 2026 Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes.</span>
+      <span lang="en">&copy; 2026 Kristian Dahlmann Oddershede — All rights reserved.</span>
+    </div>
   </footer>
 
   <script>
@@ -150,142 +216,31 @@
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 15);
     });
-   
-    // === Translations ===
-    const translations = {
-      da: {
-        nav: ["Forside", "Ydelser", "Hvorfor mig?", "Kontakt"],
-        heroKicker: "Moderator & Facilitator",
-        heroTitle: "Skab tryghed, retning og engagement på jeres næste event",
-        heroLead1: "Som moderator og facilitator er min fornemmeste opgave at få jeres indhold til at skinne og jeres talere til at føle sig trygge.",
-        heroLead2: "Med solid erfaring i at lede alt fra intime workshops til store konferencer, sørger jeg for, at den røde tråd holdes, energien bevares, og at publikum bliver inddraget. Det handler ikke kun om at holde tidsplanen — det handler om at skabe et rum, hvor ægte viden og dialog opstår.",
-        bookBtn: "Book en samtale",
-        ctaNote: "Tip: Skriv gerne et par linjer om eventets tema, dato og format — så vender jeg hurtigt tilbage med et forslag.",
-   
-        servicesTitle: "Ydelser",
-        servicesText: "Jeg tilpasser min rolle 100 % efter jeres formål og målgruppe.",
-        s1: ["Konferencemoderator", "Jeg binder dagen sammen, introducerer talere med overskud og sørger for, at den røde tråd og tidsplanen overholdes, uden at det føles stramt eller forhastet."],
-        s2: ["Workshop Facilitator", "Jeg skaber de trygge rammer, der skal til, for at en gruppe kan samarbejde effektivt, nå deres mål og få alle de vigtige perspektiver på bordet."],
-        s3: ["Paneldebatter", "Jeg styrer paneldebatter, så de bliver dynamiske, retfærdige og skarpe. Gæsterne bliver fagligt udfordret, og publikum får konkret værdi og indsigter med hjem."],
-   
-        aboutTitle: "Hvorfor vælge mig?",
-        aboutP1: "Det kræver mere end blot at kunne tale i en mikrofon foran en forsamling at være en god moderator. Det kræver evnen til at lytte dybt, improvisere i øjeblikket og løbende læse rummet.",
-        aboutList: [
-          "Tryghed for talerne: Jeg tager altid dialogen med jeres oplægsholdere på forhånd. Når de står på scenen, ved de, at de er i trygge hænder og kan fokusere på deres faglighed.",
-          "Faglig tyngde og nysgerrighed: Med min naturvidenskabelige baggrund (cand.scient. i fysik) er jeg vant til at sætte mig lynhurtigt ind i komplekst stof. Jeg stiller de spørgsmål, som publikum brænder for at få besvaret.",
-          "Publikumsinddragelse: En envejs-præsentation kan hurtigt miste energien. Jeg ved, hvordan man bryder isen, faciliterer spørgerunder og gør tilhørerne til en aktiv, tænkende del af jeres event."
-        ],
-   
-        contactTitle: "Skal jeg styre slagets gang?",
-        contactText: "Send mig en email — lad os tage en uforpligtende snak om, hvordan jeg kan bidrage til jeres næste arrangement.",
-        contactBtn: "Kontakt mig",
-   
-        footer: "© 2025 Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes."
-      },
-   
-      en: {
-        nav: ["Home", "Services", "Why me?", "Contact"],
-        heroKicker: "Moderator & Facilitator",
-        heroTitle: "Bring focus, flow, and engagement to your next event",
-        heroLead1: "As a moderator and facilitator, my primary goal is to make your content shine and ensure your speakers feel confident and supported.",
-        heroLead2: "With extensive experience guiding everything from intimate workshops to large conferences, I ensure the red thread is maintained, the energy stays high, and the audience remains engaged. It's not just about keeping the schedule on track — it's about creating a space where genuine dialogue and learning occur.",
-        bookBtn: "Book a chat",
-        ctaNote: "Tip: Include a few lines about the event topic, date, and format — I’ll get back to you soon with a tailored suggestion.",
-   
-        servicesTitle: "Services",
-        servicesText: "I tailor my role 100% to fit your goals and your audience.",
-        s1: ["Conference Moderator", "I connect the dots throughout the day, introduce speakers with enthusiasm, and ensure the schedule runs smoothly without ever feeling rushed."],
-        s2: ["Workshop Facilitator", "I create the safe framework necessary for a group to collaborate effectively, reach their goals, and ensure all important voices are heard."],
-        s3: ["Panel Discussions", "I guide panel discussions to be dynamic, fair, and sharp. Guests are professionally challenged, and the audience leaves with concrete value and insights."],
-   
-        aboutTitle: "Why choose me?",
-        aboutP1: "Being a great moderator requires much more than simply speaking into a microphone. It demands the ability to listen deeply, improvise in the moment, and constantly read the room.",
-        aboutList: [
-          "Security for the speakers: I always connect with your presenters beforehand. When they step on stage, they know they are in safe hands and can focus purely on their expertise.",
-          "Academic depth and curiosity: With my background in science (MSc in Physics), I am used to quickly grasping complex material. I ask the questions the audience is dying to have answered.",
-          "Audience engagement: A one-way presentation can quickly lose its energy. I know how to break the ice, facilitate Q&A sessions, and make the audience an active, thinking part of your event."
-        ],
-   
-        contactTitle: "Need someone to steer the ship?",
-        contactText: "Send me an email — let's have a non-binding chat about how I can contribute to your next event.",
-        contactBtn: "Contact me",
-   
-        footer: "© 2025 Kristian Dahlmann Oddershede — All rights reserved."
-      }
-    };
-   
-    // === Apply translations ===
+    
+    // === Apply translations by toggling the html attribute ===
     function applyLanguage(lang) {
-      const t = translations[lang];
-      if (!t) return;
-   
-      document.querySelector('.kicker').textContent = t.heroKicker;
-      document.querySelector('h1.hero-title').textContent = t.heroTitle;
-   
-      const leads = document.querySelectorAll('.lead');
-      if (leads[0]) leads[0].textContent = t.heroLead1;
-      if (leads[1]) leads[1].textContent = t.heroLead2;
-   
-      document.querySelector('.btn').textContent = t.bookBtn;
-      document.querySelector('.cta-note').textContent = t.ctaNote;
-   
-      const nav = document.querySelectorAll('nav.primary-nav a');
-      nav.forEach((a, i) => (a.textContent = t.nav[i]));
-   
-      // Ydelser
-      document.querySelector('#ydelser h2').textContent = t.servicesTitle;
-      document.querySelector('#ydelser p.muted').textContent = t.servicesText;
-      const f = document.querySelectorAll('#ydelser .service');
-      f[0].querySelector('h3').textContent = t.s1[0];
-      f[0].querySelector('p').textContent = t.s1[1];
-      f[1].querySelector('h3').textContent = t.s2[0];
-      f[1].querySelector('p').textContent = t.s2[1];
-      f[2].querySelector('h3').textContent = t.s3[0];
-      f[2].querySelector('p').textContent = t.s3[1];
-   
-      // Hvorfor mig
-      document.querySelector('#hvorfor-mig h2').textContent = t.aboutTitle;
-      const aboutParas = document.querySelectorAll('#hvorfor-mig p.muted');
-      aboutParas[0].textContent = t.aboutP1;
+      document.documentElement.setAttribute('lang', lang);
       
-      const aboutLis = document.querySelectorAll('#hvorfor-mig li');
-      aboutLis.forEach((li, i) => {
-        // Simple way to handle the bolding within translation strings for the list
-        // Split at the first colon to make the first part bold.
-        const parts = t.aboutList[i].split(':');
-        if (parts.length > 1) {
-            li.innerHTML = `<strong>${parts[0]}:</strong>${parts.slice(1).join(':')}`;
-        } else {
-            li.textContent = t.aboutList[i];
-        }
+      // Update button transparency based on selected language
+      buttons.forEach(btn => {
+        btn.style.opacity = btn.dataset.lang === lang ? '1' : '0.5';
       });
-   
-      // Contact
-      const contact = document.querySelector('#kontakt');
-      contact.querySelector('h3').textContent = t.contactTitle;
-      contact.querySelector('p').textContent = t.contactText;
-      contact.querySelector('.btn').textContent = t.contactBtn;
-   
-      // Footer
-      document.querySelector('footer.site-footer div').textContent = t.footer;
     }
-   
-    // === Initialize ===
+    
+    // === Initialize language switching ===
     // Syncs with localStorage used on the index.html page
     const buttons = document.querySelectorAll('#lang-switcher button');
     const savedLang = localStorage.getItem('lang') || 'da';
+    
     applyLanguage(savedLang);
     
     buttons.forEach(btn => {
-      btn.style.opacity = btn.dataset.lang === savedLang ? '1' : '0.5';
       btn.addEventListener('click', e => {
-        const lang = e.target.dataset.lang;
+        const lang = e.currentTarget.dataset.lang;
         localStorage.setItem('lang', lang);
-        buttons.forEach(b => (b.style.opacity = b.dataset.lang === lang ? '1' : '0.5'));
         applyLanguage(lang);
       });
     });
   </script>
-
 </body>
 </html>
