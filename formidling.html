@@ -51,29 +51,6 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     }
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .approach-card {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: var(--radius);
-      box-shadow: 0 4px 20px rgba(15,23,42,0.02);
-      border: 1px solid rgba(15,23,42,0.04);
-    }
-
-    .approach-card h4 {
-      margin-top: 0;
-      color: var(--science-dark);
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-    }
   </style>
 </head>
 <body class="science-page">
@@ -208,19 +185,39 @@
           <span lang="en">Communication isn't an innate talent – it's a muscle that needs resistance training. My framework is built on absolute "Learning by Doing".</span>
         </p> 
         
-        <div class="approach-grid">
-          <div class="approach-card">
-            <h4><span lang="da">01. Evidensbaseret</span><span lang="en">01. Evidence-Based</span></h4>
-            <p><span lang="da">Ingen mavefornemmelser. Vi trækker direkte på kognitiv psykologi og pædagogiske principper, der beviseligt sikrer, at budskabet lagrer sig solidt i modtagerens hukommelse.</span><span lang="en">No guesswork. We rely directly on cognitive psychology and educational frameworks proven to embed complex structures deeply into audience memory.</span></p>
-          </div>
-          <div class="approach-card">
-            <h4><span lang="da">02. 100% Interaktivt</span><span lang="en">02. 100% Interactive</span></h4>
-            <p><span lang="da">Glem alt om kedelige slideshows. Mine workshops tvinger deltagerne på gulvet med det samme gennem simulererede scenarier og benhård, konstruktiv realtids-feedback.</span><span lang="en">Forget bullet-point monologues. My sessions push participants onto the floor immediately with live situational drills and rigorous, constructive feedback loops.</span></p>
-          </div>
-          <div class="approach-card">
-            <h4><span lang="da">03. International Tyngde</span><span lang="en">03. Elite Experience</span></h4>
-            <p><span lang="da">Fra forskere ved CERN til folkeskoleelever. Metoderne er testet og slebet til i miljøer, hvor barren er sat højt, og hvor målgrupperne spænder utrolig bredt.</span><span lang="en">From Nobel laureates to school classes. These strategies are refined in world-class ecosystems where standards are hyper-critical and audiences shift constantly.</span></p>
-          </div>
+        <div class="services-grid">
+          <article class="service card" style="border-top: 4px solid var(--science-accent);">
+            <h3>
+              <span lang="da">Evidensbaseret</span>
+              <span lang="en">Evidence-Based</span>
+            </h3>
+            <p>
+              <span lang="da">Ingen mavefornemmelser. Vi trækker direkte på kognitiv psykologi og pædagogiske principper, der beviseligt sikrer, at budskabet lagrer sig solidt i modtagerens hukommelse.</span>
+              <span lang="en">No guesswork. We rely directly on cognitive psychology and educational frameworks proven to embed complex structures deeply into audience memory.</span>
+            </p>
+          </article>
+
+          <article class="service card" style="border-top: 4px solid var(--science-accent);">
+            <h3>
+              <span lang="da">Interaktivt</span>
+              <span lang="en">Interactive</span>
+            </h3>
+            <p>
+              <span lang="da">Glem alt om kedelige slideshows. Mine workshops tvinger deltagerne på gulvet med det samme gennem simulererede scenarier og benhård, konstruktiv realtids-feedback.</span>
+              <span lang="en">Forget bullet-point monologues. My sessions push participants onto the floor immediately with live situational drills and rigorous, constructive feedback loops.</span>
+            </p>
+          </article>
+
+          <article class="service card" style="border-top: 4px solid var(--science-accent);">
+            <h3>
+              <span lang="da">International Tyngde</span>
+              <span lang="en">Elite Experience</span>
+            </h3>
+            <p>
+              <span lang="da">Fra forskere ved CERN til folkeskoleelever. Metoderne er testet og slebet til i miljøer, hvor barren er sat højt, og hvor målgrupperne spænder utrolig bredt.</span>
+              <span lang="en">From Nobel laureates to school classes. These strategies are refined in world-class ecosystems where standards are hyper-critical and audiences shift constantly.</span>
+            </p>
+          </article>
         </div>
       </section>
 
@@ -259,7 +256,7 @@
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 15);
     });
-     
+      
     // === Apply translations ===
     function applyLanguage(lang) {
       document.documentElement.setAttribute('lang', lang);
@@ -267,11 +264,11 @@
         btn.style.opacity = btn.dataset.lang === lang ? '1' : '0.5';
       });
     }
-     
+      
     const buttons = document.querySelectorAll('#lang-switcher button');
     const savedLang = localStorage.getItem('lang') || 'da';
     applyLanguage(savedLang);
-     
+      
     buttons.forEach(btn => {
       btn.addEventListener('click', e => {
         const lang = e.currentTarget.dataset.lang || (e.currentTarget.innerText === '🇩🇰' ? 'da' : 'en');
