@@ -76,16 +76,16 @@
           <span lang="da">Jeg binder dit program professionelt sammen til konferencer, paneldebatter og faglige events. Med naturlig nysgerrighed og skarpt fokus skaber jeg en tryg og levende ramme for både paneldeltagere og publikum.</span>
           <span lang="en">I seamlessly connect your program at conferences, panel debates, and academic events. With natural curiosity and sharp focus, I create an engaging atmosphere for speakers and the audience.</span>
         </p>
-         
+          
         <p class="lead">
           <span lang="da">Jeg kommer med omfattende erfaring fra kompleks videnskabsformidling, samt praktisk erfaring som moderator og facilitator for internationale konferencer ved Aarhus University.</span>
           <span lang="en">I'm drawing on my background in complex science communication, as well as practical experience as a moderator and facilitator at various international conferences at Aarhus University.</span>
         </p>
 
         <div class="hero-actions">
-          <a class="btn" href="mailto:kristiandoddershede@gmail.com" title="Book a session">
-            <span lang="da">Book som moderator</span>
-            <span lang="en">Book as moderator</span>
+          <a class="btn" href="moderator.html" title="Læs mere om moderator">
+            <span lang="da">Læs mere</span>
+            <span lang="en">Read more</span>
           </a>
         </div>
 
@@ -134,17 +134,17 @@
           <span lang="en">communication that connects.</span>
         </h1>
         
-         
+          
         <p class="lead">
           <span lang="da">Jeg afholder træninger og workshops baseret på min erfaring med at træne forskere i formidling ved <strong>CERN</strong> – den europæiske organisation bag verdens største videnskabelige eksperiment.</span>
           <span lang="en">I host trainings and workshops based on my experience designing meaningful science outreach training for scientists at <strong>CERN</strong> – the European organization behind the world’s largest scientific experiment.</span>
         </p>
-         
+          
 
         <div class="hero-actions">
-          <a class="btn" href="mailto:kristiandoddershede@gmail.com" title="Book a session">
-            <span lang="da">Book foredrag eller workshop</span>
-            <span lang="en">Book a session now</span>
+          <a class="btn" href="formidling.html" title="Læs mere om formidling">
+            <span lang="da">Læs mere</span>
+            <span lang="en">Read more</span>
           </a>
         </div>
 
@@ -188,7 +188,7 @@
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 15);
     });
-     
+      
     // === Apply translations by toggling the html attribute ===
     function applyLanguage(lang) {
       document.documentElement.setAttribute('lang', lang);
@@ -198,13 +198,13 @@
         btn.style.opacity = btn.dataset.lang === lang ? '1' : '0.5';
       });
     }
-     
+      
     // === Initialize language switching ===
     const buttons = document.querySelectorAll('#lang-switcher button');
     const savedLang = localStorage.getItem('lang') || 'da';
     
     applyLanguage(savedLang);
-     
+      
     buttons.forEach(btn => {
       btn.addEventListener('click', e => {
         const lang = e.currentTarget.dataset.lang;
