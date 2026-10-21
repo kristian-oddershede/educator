@@ -3,9 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kristian D. Oddershede | Science Communication Training</title>
-  <link rel="icon" type="image/png" href="figures/debate_1308869.png">
+  
+  <!-- Primær Titel & Beskrivelse (Optimeret for søgeord) -->
+  <title>Kristian D. Oddershede | Science Communication Training & Workshops</title>
   <meta name="description" content="Lær at formidle komplekst stof så det fænger. Workshops og foredrag om science formidling og træning af formidlere af Kristian Dahlmann Oddershede.">
+
+  <!-- Canonical & Flersproget SEO -->
+  <link rel="canonical" href="https://kristian-freelance.dk/formidling.html" />
+  <link rel="alternate" hreflang="da" href="https://kristian-freelance.dk/formidling.html" />
+  <link rel="alternate" hreflang="en" href="https://kristian-freelance.dk/formidling.html" />
+  <link rel="alternate" hreflang="x-default" href="https://kristian-freelance.dk/formidling.html" />
+
+  <link rel="icon" type="image/png" href="figures/debate_1308869.png">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kristian-freelance.dk/formidling.html">
+  <meta property="og:title" content="Kristian D. Oddershede | Science Communication Training">
+  <meta property="og:description" content="Lær at formidle komplekst stof så det fænger. Hæsblæsende og praktiske workshops baseret på erfaringer fra CERN.">
+  <meta property="og:image" content="https://kristian-freelance.dk/figures/PLP_6566.jpg">
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kristian D. Oddershede | Science Communication Training">
+  <meta name="twitter:description" content="Workshops og foredrag om science formidling og træning af formidlere baseret på erfaringer fra CERN.">
+  <meta name="twitter:image" content="https://kristian-freelance.dk/figures/PLP_6566.jpg">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -52,16 +76,60 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     }
   </style>
+
+  <!-- Structured Data (Schema.org) for Science Communication Ydelser -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Science Communication Training & Workshops",
+    "provider": {
+      "@type": "Person",
+      "name": "Kristian Dahlmann Oddershede",
+      "url": "https://kristian-freelance.dk/"
+    },
+    "description": "Træning i videnskabsformidling, workshops for eksperter og forskere samt foredrag om storytelling i science baseret på erfaringer fra CERN.",
+    "serviceType": "Science Communication Workshop",
+    "areaServed": "Denmark",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Workshops og Foredrag",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fra Ekspert til Formidler Workshop"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Træning af Formidlere"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Storytelling i Science Foredrag"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body class="science-page">
   <header class="site-header scrolled" id="siteHeader" style="background: rgba(15,23,42,0.95); border-bottom: 1px solid rgba(255,255,255,0.05);">
     <div class="header-inner">
       <div class="brand">
-        <img src="figures/Kristian Dahlmann Oddershede Square 2.jpg" alt="Kristian Dahlmann Oddershede profile photo">
+        <img src="figures/Kristian Dahlmann Oddershede Square 2.jpg" alt="Kristian Dahlmann Oddershede profilfoto" width="40" height="40">
         <div class="name" style="color: #ffffff;">Kristian D. Oddershede</div>
       </div>
 
-      <nav class="primary-nav" aria-label="Main navigation">
+      <nav class="primary-nav" aria-label="Hovednavigation">
         <a href="index.html" style="color: #94a3b8;">
           <span lang="da">← Tilbage til Forsiden</span>
           <span lang="en">← Back Home</span>
@@ -69,8 +137,8 @@
       </nav>
 
       <div id="lang-switcher" style="display:flex; gap:0.4rem; align-items:center;">
-        <button data-lang="da" title="Dansk" style="font-size:1.2rem; background:none; border:none; cursor:pointer;color: #ffffff;">🇩🇰</button>
-        <button data-lang="en" title="English" style="font-size:1.2rem; background:none; border:none; cursor:pointer;color: #ffffff;">🇬🇧</button>
+        <button data-lang="da" title="Dansk" style="font-size:1.2rem; background:none; border:none; cursor:pointer;color: #ffffff;" aria-label="Skift til dansk">🇩🇰</button>
+        <button data-lang="en" title="English" style="font-size:1.2rem; background:none; border:none; cursor:pointer;color: #ffffff;" aria-label="Switch to English">🇬🇧</button>
       </div>
 
       <div class="header-cta">
@@ -81,7 +149,7 @@
           </svg>
         </a>
 
-        <a class="button linkedin" href="https://www.linkedin.com/in/kristian-dahlmann-oddershede-b5703a217/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+        <a class="button linkedin" href="https://www.linkedin.com/in/kristian-dahlmann-oddershede-b5703a217/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn profil">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
             <rect x="2" y="9" width="4" height="12"></rect>
@@ -112,9 +180,9 @@
           </p>
         </div>
 
-        <div class="hero-right" aria-hidden="false">
-          <div class="portrait-card" role="img" aria-label="Kristian speaking at a conference">
-            <img src="figures/PLP_6566.jpg" alt="Kristian Oddershede giving a talk">
+        <div class="hero-right">
+          <div class="portrait-card">
+            <img src="figures/PLP_6566.jpg" alt="Kristian Oddershede holder oplæg om videnskabsformidling">
             <div class="portrait-overlay">
               <div class="meta">
                 <div style="font-size:0.95rem;font-weight:700">Kristian D. Oddershede</div>
@@ -234,7 +302,7 @@
               <span lang="en">Let's map out a specialized roadmap or masterclass engineered directly for your team or department.</span>
             </p>
           </div>
-          <a class="btn" href="mailto:kristiandoddershede@gmail.com" style="background: var(--science-accent); color: white; padding: 1rem 2rem; font-size: 1rem; border-radius: 10px; font-weight: 700;">
+          <a class="btn" href="mailto:kristiandoddershede@gmail.com" style="background: var(--science-accent); color: white; padding: 1rem 2rem; font-size: 1rem; border-radius: 10px; font-weight: 700;" aria-label="Send email til Kristian">
             <span lang="da">Start dialogen</span>
             <span lang="en">Let's talk</span>
           </a>
